@@ -1,0 +1,2559 @@
+{
+ "env": [
+  "date: 2026-10-27T20:36:38+03:00",
+  "cpu: AMD EPYC 7302 16-Core Processor",
+  "cores: 6",
+  "ram: 16 GiB",
+  "os: Ubuntu 24.04.5 LTS",
+  "fxserver: build 35245",
+  "server: Qbox, its whole server.cfg",
+  "mariadb: server 10.11.14-MariaDB-0ubuntu0.24.04.1-log, client mysql  Ver 15.1 Distrib 10.11.14-MariaDB, for debian-linux-gnu (x86_64) using  EditLine wrapper",
+  "oxmysql: 2.14.3 (package ?)",
+  "cis_database: 1.0.0 build 5f34b49",
+  "cis_database frame budget: 25 ms (BENCH_FRAME_MS, convar cis_database_frame_ms)",
+  "cis_database write ack: power (default: answered after an fdatasync of the WAL)",
+  "bench scripts: ? (modified)",
+  "rounds: 5",
+  "scale: 1",
+  "reproduce: BENCH_DATA=<server data folder> BENCH_SERVER=qbox BENCH_DB=qbox BENCH_FXROOT=<FXServer folder> BENCH_FRAME_MS=25 bash bench/run_bench.sh 5 1"
+ ],
+ "runs": [
+  1,
+  2,
+  3,
+  4,
+  5
+ ],
+ "metrics": [
+  {
+   "group": "Single call (one thread, .await)",
+   "metric": "read_player mean",
+   "unit": "\u00b5s",
+   "better": "lower",
+   "oxmysql": {
+    "median": 1889.5103625000015,
+    "min": 1822.9220019999987,
+    "max": 2066.8010815,
+    "runs": [
+     2066.8010815,
+     1822.9220019999987,
+     1889.5103625000015,
+     1923.5354684999988,
+     1829.710563499997
+    ]
+   },
+   "cis_database": {
+    "median": 234.48686649999996,
+    "min": 231.38488599999963,
+    "max": 261.340423,
+    "runs": [
+     234.48686649999996,
+     261.340423,
+     237.91046799999953,
+     231.38488599999963,
+     232.31450900000002
+    ]
+   },
+   "advantage": 8.05806478931306,
+   "winner": "cis_database"
+  },
+  {
+   "group": "Single call (one thread, .await)",
+   "metric": "read_player p50",
+   "unit": "\u00b5s",
+   "better": "lower",
+   "oxmysql": {
+    "median": 1634.859,
+    "min": 1615.436,
+    "max": 1654.439,
+    "runs": [
+     1652.659,
+     1634.859,
+     1617.618,
+     1654.439,
+     1615.436
+    ]
+   },
+   "cis_database": {
+    "median": 101.463,
+    "min": 99.273,
+    "max": 109.343,
+    "runs": [
+     101.463,
+     109.343,
+     99.473,
+     99.273,
+     103.262
+    ]
+   },
+   "advantage": 16.112858874663672,
+   "winner": "cis_database"
+  },
+  {
+   "group": "Single call (one thread, .await)",
+   "metric": "read_player p99",
+   "unit": "\u00b5s",
+   "better": "lower",
+   "oxmysql": {
+    "median": 6962.324,
+    "min": 5597.132,
+    "max": 7772.181,
+    "runs": [
+     7772.181,
+     6962.324,
+     6426.407,
+     7252.191,
+     5597.132
+    ]
+   },
+   "cis_database": {
+    "median": 2293.907,
+    "min": 1864.053,
+    "max": 2922.156,
+    "runs": [
+     2097.873,
+     2922.156,
+     2293.907,
+     2380.61,
+     1864.053
+    ]
+   },
+   "advantage": 3.035137867402645,
+   "winner": "cis_database"
+  },
+  {
+   "group": "Single call (one thread, .await)",
+   "metric": "read_by_license mean",
+   "unit": "\u00b5s",
+   "better": "lower",
+   "oxmysql": {
+    "median": 1700.7956129999993,
+    "min": 1670.3435334999988,
+    "max": 1952.6373830000016,
+    "runs": [
+     1952.6373830000016,
+     1670.3435334999988,
+     1700.7956129999993,
+     1702.8791559999981,
+     1678.0197289999983
+    ]
+   },
+   "cis_database": {
+    "median": 182.56500849999992,
+    "min": 166.80691700000008,
+    "max": 202.26963300000006,
+    "runs": [
+     192.36496799999992,
+     182.56500849999992,
+     176.16669650000026,
+     166.80691700000008,
+     202.26963300000006
+    ]
+   },
+   "advantage": 9.31610951613436,
+   "winner": "cis_database"
+  },
+  {
+   "group": "Single call (one thread, .await)",
+   "metric": "read_by_license p50",
+   "unit": "\u00b5s",
+   "better": "lower",
+   "oxmysql": {
+    "median": 1563.445,
+    "min": 1549.275,
+    "max": 1587.927,
+    "runs": [
+     1578.267,
+     1563.445,
+     1549.275,
+     1587.927,
+     1549.726
+    ]
+   },
+   "cis_database": {
+    "median": 78.682,
+    "min": 73.452,
+    "max": 87.553,
+    "runs": [
+     82.582,
+     78.682,
+     75.862,
+     73.452,
+     87.553
+    ]
+   },
+   "advantage": 19.87042779797158,
+   "winner": "cis_database"
+  },
+  {
+   "group": "Single call (one thread, .await)",
+   "metric": "read_by_license p99",
+   "unit": "\u00b5s",
+   "better": "lower",
+   "oxmysql": {
+    "median": 4033.598,
+    "min": 3058.509,
+    "max": 5874.405,
+    "runs": [
+     5874.405,
+     3058.509,
+     4033.598,
+     4047.467,
+     3551.414
+    ]
+   },
+   "cis_database": {
+    "median": 1716.631,
+    "min": 1626.027,
+    "max": 1805.462,
+    "runs": [
+     1692.381,
+     1718.071,
+     1716.631,
+     1626.027,
+     1805.462
+    ]
+   },
+   "advantage": 2.349717557238568,
+   "winner": "cis_database"
+  },
+  {
+   "group": "Single call (one thread, .await)",
+   "metric": "read_vehicles mean",
+   "unit": "\u00b5s",
+   "better": "lower",
+   "oxmysql": {
+    "median": 1774.6073684999958,
+    "min": 1704.0353465000019,
+    "max": 2065.936855999999,
+    "runs": [
+     2065.936855999999,
+     1774.6073684999958,
+     1763.8735179999976,
+     1785.0778624999994,
+     1704.0353465000019
+    ]
+   },
+   "cis_database": {
+    "median": 203.75348249999956,
+    "min": 200.58170049999967,
+    "max": 228.14039900000017,
+    "runs": [
+     203.75348249999956,
+     202.37728049999956,
+     212.95499150000003,
+     200.58170049999967,
+     228.14039900000017
+    ]
+   },
+   "advantage": 8.709580551586399,
+   "winner": "cis_database"
+  },
+  {
+   "group": "Single call (one thread, .await)",
+   "metric": "read_vehicles p50",
+   "unit": "\u00b5s",
+   "better": "lower",
+   "oxmysql": {
+    "median": 1612.198,
+    "min": 1546.875,
+    "max": 1623.649,
+    "runs": [
+     1623.649,
+     1612.198,
+     1578.156,
+     1615.817,
+     1546.875
+    ]
+   },
+   "cis_database": {
+    "median": 93.023,
+    "min": 89.932,
+    "max": 98.273,
+    "runs": [
+     93.023,
+     89.932,
+     98.193,
+     90.153,
+     98.273
+    ]
+   },
+   "advantage": 17.331176160734444,
+   "winner": "cis_database"
+  },
+  {
+   "group": "Single call (one thread, .await)",
+   "metric": "read_vehicles p99",
+   "unit": "\u00b5s",
+   "better": "lower",
+   "oxmysql": {
+    "median": 4465.651,
+    "min": 3651.675,
+    "max": 7093.851,
+    "runs": [
+     7093.851,
+     4038.658,
+     4472.351,
+     4465.651,
+     3651.675
+    ]
+   },
+   "cis_database": {
+    "median": 1718.481,
+    "min": 1658.149,
+    "max": 1898.636,
+    "runs": [
+     1658.149,
+     1718.481,
+     1898.636,
+     1674.059,
+     1787.961
+    ]
+   },
+   "advantage": 2.598603650549526,
+   "winner": "cis_database"
+  },
+  {
+   "group": "Single call (one thread, .await)",
+   "metric": "read_messages mean",
+   "unit": "\u00b5s",
+   "better": "lower",
+   "oxmysql": {
+    "median": 1717.9735175000017,
+    "min": 1668.4165680000012,
+    "max": 1785.9058525000016,
+    "runs": [
+     1785.9058525000016,
+     1683.2952194999993,
+     1717.9735175000017,
+     1730.3079549999984,
+     1668.4165680000012
+    ]
+   },
+   "cis_database": {
+    "median": 129.4578385,
+    "min": 124.94985199999992,
+    "max": 156.8891275000003,
+    "runs": [
+     124.94985199999992,
+     139.47320749999994,
+     129.4578385,
+     127.39068900000012,
+     156.8891275000003
+    ]
+   },
+   "advantage": 13.270525272210547,
+   "winner": "cis_database"
+  },
+  {
+   "group": "Single call (one thread, .await)",
+   "metric": "read_messages p50",
+   "unit": "\u00b5s",
+   "better": "lower",
+   "oxmysql": {
+    "median": 1531.275,
+    "min": 1521.395,
+    "max": 1571.885,
+    "runs": [
+     1545.527,
+     1521.914,
+     1531.275,
+     1571.885,
+     1521.395
+    ]
+   },
+   "cis_database": {
+    "median": 56.502,
+    "min": 53.212,
+    "max": 66.522,
+    "runs": [
+     53.212,
+     61.462,
+     56.502,
+     54.942,
+     66.522
+    ]
+   },
+   "advantage": 27.101253052989275,
+   "winner": "cis_database"
+  },
+  {
+   "group": "Single call (one thread, .await)",
+   "metric": "read_messages p99",
+   "unit": "\u00b5s",
+   "better": "lower",
+   "oxmysql": {
+    "median": 4096.79,
+    "min": 3872.773,
+    "max": 5269.178,
+    "runs": [
+     5269.178,
+     4033.608,
+     4096.79,
+     4178.631,
+     3872.773
+    ]
+   },
+   "cis_database": {
+    "median": 1535.776,
+    "min": 1509.925,
+    "max": 1614.658,
+    "runs": [
+     1509.925,
+     1535.776,
+     1519.904,
+     1577.815,
+     1614.658
+    ]
+   },
+   "advantage": 2.6675700102098223,
+   "winner": "cis_database"
+  },
+  {
+   "group": "Single call (one thread, .await)",
+   "metric": "json_hunger mean",
+   "unit": "\u00b5s",
+   "better": "lower",
+   "oxmysql": {
+    "median": 1701.4248324999974,
+    "min": 1642.5268775000015,
+    "max": 1743.476699499998,
+    "runs": [
+     1701.4248324999974,
+     1642.5268775000015,
+     1653.2066190000007,
+     1743.476699499998,
+     1709.4038530000012
+    ]
+   },
+   "cis_database": {
+    "median": 175.77090750000002,
+    "min": 166.27977349999983,
+    "max": 184.90884149999988,
+    "runs": [
+     175.77090750000002,
+     166.27977349999983,
+     176.44345700000008,
+     184.90884149999988,
+     174.93978550000057
+    ]
+   },
+   "advantage": 9.679786357705396,
+   "winner": "cis_database"
+  },
+  {
+   "group": "Single call (one thread, .await)",
+   "metric": "json_hunger p50",
+   "unit": "\u00b5s",
+   "better": "lower",
+   "oxmysql": {
+    "median": 1521.484,
+    "min": 1513.596,
+    "max": 1554.236,
+    "runs": [
+     1513.596,
+     1521.484,
+     1529.675,
+     1554.236,
+     1518.304
+    ]
+   },
+   "cis_database": {
+    "median": 72.492,
+    "min": 70.352,
+    "max": 76.002,
+    "runs": [
+     74.102,
+     70.352,
+     72.492,
+     76.002,
+     72.412
+    ]
+   },
+   "advantage": 20.988302157479442,
+   "winner": "cis_database"
+  },
+  {
+   "group": "Single call (one thread, .await)",
+   "metric": "json_hunger p99",
+   "unit": "\u00b5s",
+   "better": "lower",
+   "oxmysql": {
+    "median": 4602.903,
+    "min": 2987.448,
+    "max": 5216.106,
+    "runs": [
+     5216.106,
+     4256.155,
+     2987.448,
+     4602.903,
+     4607.774
+    ]
+   },
+   "cis_database": {
+    "median": 1681.779,
+    "min": 1594.287,
+    "max": 1832.564,
+    "runs": [
+     1594.287,
+     1616.898,
+     1832.564,
+     1824.404,
+     1681.779
+    ]
+   },
+   "advantage": 2.7369250061987933,
+   "winner": "cis_database"
+  },
+  {
+   "group": "Single call (one thread, .await)",
+   "metric": "in_list mean",
+   "unit": "\u00b5s",
+   "better": "lower",
+   "oxmysql": {
+    "median": 1792.7113630000003,
+    "min": 1750.5470575000018,
+    "max": 1870.3696049999996,
+    "runs": [
+     1870.3696049999996,
+     1750.5470575000018,
+     1803.8311909999993,
+     1792.7113630000003,
+     1782.6972520000043
+    ]
+   },
+   "cis_database": {
+    "median": 332.8922080000004,
+    "min": 311.3668295000001,
+    "max": 334.603787,
+    "runs": [
+     311.3668295000001,
+     332.8922080000004,
+     334.603787,
+     333.568874999999,
+     320.1795270000002
+    ]
+   },
+   "advantage": 5.38526081391487,
+   "winner": "cis_database"
+  },
+  {
+   "group": "Single call (one thread, .await)",
+   "metric": "in_list p50",
+   "unit": "\u00b5s",
+   "better": "lower",
+   "oxmysql": {
+    "median": 1586.756,
+    "min": 1570.145,
+    "max": 1591.638,
+    "runs": [
+     1591.638,
+     1570.145,
+     1591.376,
+     1586.756,
+     1572.476
+    ]
+   },
+   "cis_database": {
+    "median": 139.854,
+    "min": 136.514,
+    "max": 147.215,
+    "runs": [
+     136.514,
+     145.385,
+     139.854,
+     147.215,
+     136.534
+    ]
+   },
+   "advantage": 11.345803480772805,
+   "winner": "cis_database"
+  },
+  {
+   "group": "Single call (one thread, .await)",
+   "metric": "in_list p99",
+   "unit": "\u00b5s",
+   "better": "lower",
+   "oxmysql": {
+    "median": 5550.133,
+    "min": 4689.117,
+    "max": 5992.999,
+    "runs": [
+     5992.999,
+     5550.133,
+     5642.995,
+     4964.764,
+     4689.117
+    ]
+   },
+   "cis_database": {
+    "median": 2531.104,
+    "min": 2474.641,
+    "max": 2703.769,
+    "runs": [
+     2517.475,
+     2531.104,
+     2703.769,
+     2536.584,
+     2474.641
+    ]
+   },
+   "advantage": 2.1927716127033894,
+   "winner": "cis_database"
+  },
+  {
+   "group": "Single call (one thread, .await)",
+   "metric": "count_police mean",
+   "unit": "\u00b5s",
+   "better": "lower",
+   "oxmysql": {
+    "median": 1827.6950500000003,
+    "min": 1691.6355559999972,
+    "max": 2191.265988000002,
+    "runs": [
+     1827.6950500000003,
+     1691.6355559999972,
+     2191.265988000002,
+     1843.9830179999997,
+     1755.3573860000006
+    ]
+   },
+   "cis_database": {
+    "median": 465.573564,
+    "min": 450.48772599999995,
+    "max": 517.5953779999998,
+    "runs": [
+     509.7874379999996,
+     450.48772599999995,
+     517.5953779999998,
+     458.449106,
+     465.573564
+    ]
+   },
+   "advantage": 3.925684771053711,
+   "winner": "cis_database"
+  },
+  {
+   "group": "Single call (one thread, .await)",
+   "metric": "count_police p50",
+   "unit": "\u00b5s",
+   "better": "lower",
+   "oxmysql": {
+    "median": 1544.636,
+    "min": 1503.454,
+    "max": 1560.395,
+    "runs": [
+     1544.636,
+     1503.454,
+     1548.765,
+     1560.395,
+     1521.494
+    ]
+   },
+   "cis_database": {
+    "median": 230.806,
+    "min": 218.396,
+    "max": 250.857,
+    "runs": [
+     243.357,
+     218.396,
+     250.857,
+     230.806,
+     228.516
+    ]
+   },
+   "advantage": 6.692356351221371,
+   "winner": "cis_database"
+  },
+  {
+   "group": "Single call (one thread, .await)",
+   "metric": "count_police p99",
+   "unit": "\u00b5s",
+   "better": "lower",
+   "oxmysql": {
+    "median": 4673.11,
+    "min": 2962.967,
+    "max": 6413.657,
+    "runs": [
+     4673.11,
+     2962.967,
+     6413.657,
+     4356.536,
+     4692.266
+    ]
+   },
+   "cis_database": {
+    "median": 2512.805,
+    "min": 2022.739,
+    "max": 4220.952,
+    "runs": [
+     2512.805,
+     2022.739,
+     2532.784,
+     2245.066,
+     4220.952
+    ]
+   },
+   "advantage": 1.8597185217316903,
+   "winner": "cis_database"
+  },
+  {
+   "group": "Single call (one thread, .await)",
+   "metric": "richest mean",
+   "unit": "\u00b5s",
+   "better": "lower",
+   "oxmysql": {
+    "median": 14662.997709999998,
+    "min": 13613.924662000007,
+    "max": 15091.605335999991,
+    "runs": [
+     15091.605335999991,
+     14597.014490000005,
+     14662.997709999998,
+     14837.134606000005,
+     13613.924662000007
+    ]
+   },
+   "cis_database": {
+    "median": 462.6512560000003,
+    "min": 420.77876800000007,
+    "max": 532.625974,
+    "runs": [
+     443.36654400000054,
+     470.4476820000006,
+     462.6512560000003,
+     532.625974,
+     420.77876800000007
+    ]
+   },
+   "advantage": 31.69341381837725,
+   "winner": "cis_database"
+  },
+  {
+   "group": "Single call (one thread, .await)",
+   "metric": "richest p50",
+   "unit": "\u00b5s",
+   "better": "lower",
+   "oxmysql": {
+    "median": 14385.33,
+    "min": 13410.669,
+    "max": 14793.881,
+    "runs": [
+     14793.881,
+     14356.52,
+     14385.33,
+     14593.334,
+     13410.669
+    ]
+   },
+   "cis_database": {
+    "median": 125.233,
+    "min": 100.583,
+    "max": 142.434,
+    "runs": [
+     120.874,
+     125.233,
+     129.574,
+     142.434,
+     100.583
+    ]
+   },
+   "advantage": 114.86852506927087,
+   "winner": "cis_database"
+  },
+  {
+   "group": "Single call (one thread, .await)",
+   "metric": "richest p99",
+   "unit": "\u00b5s",
+   "better": "lower",
+   "oxmysql": {
+    "median": 19232.443,
+    "min": 17401.784,
+    "max": 21697.297,
+    "runs": [
+     21697.297,
+     19232.443,
+     18945.813,
+     19864.438,
+     17401.784
+    ]
+   },
+   "cis_database": {
+    "median": 11964.372,
+    "min": 3246.714,
+    "max": 12711.759,
+    "runs": [
+     11771.248,
+     11964.372,
+     3246.714,
+     12711.759,
+     12168.383
+    ]
+   },
+   "advantage": 1.607476180112086,
+   "winner": "cis_database"
+  },
+  {
+   "group": "Single call (one thread, .await)",
+   "metric": "save_player mean",
+   "unit": "\u00b5s",
+   "better": "lower",
+   "oxmysql": {
+    "median": 2212.573582500001,
+    "min": 2100.1304694999976,
+    "max": 2249.1830229999982,
+    "runs": [
+     2212.573582500001,
+     2217.3431324999974,
+     2249.1830229999982,
+     2100.1304694999976,
+     2119.928522000003
+    ]
+   },
+   "cis_database": {
+    "median": 2240.8384504999985,
+    "min": 2168.6758689999992,
+    "max": 2376.325795999998,
+    "runs": [
+     2259.421965499998,
+     2168.6758689999992,
+     2376.325795999998,
+     2240.8384504999985,
+     2212.2708900000002
+    ]
+   },
+   "advantage": 0.9873864767030882,
+   "winner": "oxmysql"
+  },
+  {
+   "group": "Single call (one thread, .await)",
+   "metric": "save_player p50",
+   "unit": "\u00b5s",
+   "better": "lower",
+   "oxmysql": {
+    "median": 1600.137,
+    "min": 1563.906,
+    "max": 1607.607,
+    "runs": [
+     1603.437,
+     1600.137,
+     1607.607,
+     1563.906,
+     1575.775
+    ]
+   },
+   "cis_database": {
+    "median": 1898.234,
+    "min": 1865.584,
+    "max": 1963.726,
+    "runs": [
+     1887.796,
+     1865.584,
+     1963.726,
+     1923.617,
+     1898.234
+    ]
+   },
+   "advantage": 0.8429608783743205,
+   "winner": "oxmysql"
+  },
+  {
+   "group": "Single call (one thread, .await)",
+   "metric": "save_player p99",
+   "unit": "\u00b5s",
+   "better": "lower",
+   "oxmysql": {
+    "median": 6012.689,
+    "min": 5386.386,
+    "max": 7423.656,
+    "runs": [
+     6012.689,
+     6251.963,
+     7423.656,
+     5386.386,
+     5784.918
+    ]
+   },
+   "cis_database": {
+    "median": 6635.403,
+    "min": 6403.088,
+    "max": 7961.175,
+    "runs": [
+     7961.175,
+     6403.088,
+     7954.192,
+     6635.403,
+     6578.561
+    ]
+   },
+   "advantage": 0.906152798857884,
+   "winner": "oxmysql"
+  },
+  {
+   "group": "Single call (one thread, .await)",
+   "metric": "save_inventory mean",
+   "unit": "\u00b5s",
+   "better": "lower",
+   "oxmysql": {
+    "median": 2096.9083300000016,
+    "min": 1995.4041010000033,
+    "max": 2156.1018799999943,
+    "runs": [
+     2156.1018799999943,
+     2096.9083300000016,
+     2068.7341230000025,
+     2104.2488609999987,
+     1995.4041010000033
+    ]
+   },
+   "cis_database": {
+    "median": 2150.3202345000045,
+    "min": 2066.1997664999985,
+    "max": 2177.9323250000025,
+    "runs": [
+     2152.9139664999993,
+     2121.5825614999994,
+     2177.9323250000025,
+     2066.1997664999985,
+     2150.3202345000045
+    ]
+   },
+   "advantage": 0.9751609534044949,
+   "winner": "oxmysql"
+  },
+  {
+   "group": "Single call (one thread, .await)",
+   "metric": "save_inventory p50",
+   "unit": "\u00b5s",
+   "better": "lower",
+   "oxmysql": {
+    "median": 1592.496,
+    "min": 1571.706,
+    "max": 1598.047,
+    "runs": [
+     1594.287,
+     1586.846,
+     1598.047,
+     1592.496,
+     1571.706
+    ]
+   },
+   "cis_database": {
+    "median": 1837.834,
+    "min": 1823.714,
+    "max": 1868.936,
+    "runs": [
+     1868.936,
+     1824.744,
+     1858.874,
+     1823.714,
+     1837.834
+    ]
+   },
+   "advantage": 0.8665069859410589,
+   "winner": "oxmysql"
+  },
+  {
+   "group": "Single call (one thread, .await)",
+   "metric": "save_inventory p99",
+   "unit": "\u00b5s",
+   "better": "lower",
+   "oxmysql": {
+    "median": 6115.193,
+    "min": 5954.133,
+    "max": 6312.145,
+    "runs": [
+     6115.193,
+     6312.145,
+     6298.924,
+     5954.133,
+     5975.314
+    ]
+   },
+   "cis_database": {
+    "median": 6371.038,
+    "min": 5619.823,
+    "max": 7192.949,
+    "runs": [
+     6371.038,
+     6307.266,
+     6546.25,
+     5619.823,
+     7192.949
+    ]
+   },
+   "advantage": 0.9598424934837935,
+   "winner": "oxmysql"
+  },
+  {
+   "group": "Single call (one thread, .await)",
+   "metric": "send_message mean",
+   "unit": "\u00b5s",
+   "better": "lower",
+   "oxmysql": {
+    "median": 1875.2750169999988,
+    "min": 1839.8633930000017,
+    "max": 1957.3323775000017,
+    "runs": [
+     1875.2750169999988,
+     1861.152856499998,
+     1957.3323775000017,
+     1879.0275244999955,
+     1839.8633930000017
+    ]
+   },
+   "cis_database": {
+    "median": 1976.5506160000004,
+    "min": 1923.7359795000007,
+    "max": 2166.723581,
+    "runs": [
+     2051.5161220000014,
+     1976.5506160000004,
+     2166.723581,
+     1923.7359795000007,
+     1932.9953179999973
+    ]
+   },
+   "advantage": 0.9487614442148941,
+   "winner": "oxmysql"
+  },
+  {
+   "group": "Single call (one thread, .await)",
+   "metric": "send_message p50",
+   "unit": "\u00b5s",
+   "better": "lower",
+   "oxmysql": {
+    "median": 1519.964,
+    "min": 1507.704,
+    "max": 1532.295,
+    "runs": [
+     1507.704,
+     1532.295,
+     1511.445,
+     1524.575,
+     1519.964
+    ]
+   },
+   "cis_database": {
+    "median": 1744.731,
+    "min": 1734.309,
+    "max": 1780.712,
+    "runs": [
+     1780.712,
+     1738.07,
+     1770.661,
+     1744.731,
+     1734.309
+    ]
+   },
+   "advantage": 0.871173837112999,
+   "winner": "oxmysql"
+  },
+  {
+   "group": "Single call (one thread, .await)",
+   "metric": "send_message p99",
+   "unit": "\u00b5s",
+   "better": "lower",
+   "oxmysql": {
+    "median": 5558.212,
+    "min": 5071.316,
+    "max": 6226.282,
+    "runs": [
+     5641.658,
+     5267.524,
+     6226.282,
+     5558.212,
+     5071.316
+    ]
+   },
+   "cis_database": {
+    "median": 5092.221,
+    "min": 4868.112,
+    "max": 6638.733,
+    "runs": [
+     5297.967,
+     5092.221,
+     6638.733,
+     4868.112,
+     5037.746
+    ]
+   },
+   "advantage": 1.0915103645344537,
+   "winner": "cis_database"
+  },
+  {
+   "group": "Single call (one thread, .await)",
+   "metric": "bank_transfer mean",
+   "unit": "\u00b5s",
+   "better": "lower",
+   "oxmysql": {
+    "median": 7596.7972479999935,
+    "min": 7372.632759000005,
+    "max": 7736.7920195,
+    "runs": [
+     7653.571741999998,
+     7505.277691999994,
+     7736.7920195,
+     7372.632759000005,
+     7596.7972479999935
+    ]
+   },
+   "cis_database": {
+    "median": 2292.4521595000015,
+    "min": 2253.1065270000054,
+    "max": 2526.2715015000026,
+    "runs": [
+     2253.1065270000054,
+     2287.9613575000008,
+     2526.2715015000026,
+     2357.5674319999957,
+     2292.4521595000015
+    ]
+   },
+   "advantage": 3.3138302217207025,
+   "winner": "cis_database"
+  },
+  {
+   "group": "Single call (one thread, .await)",
+   "metric": "bank_transfer p50",
+   "unit": "\u00b5s",
+   "better": "lower",
+   "oxmysql": {
+    "median": 6876.605,
+    "min": 6791.208,
+    "max": 6929.592,
+    "runs": [
+     6876.605,
+     6889.861,
+     6929.592,
+     6791.208,
+     6867.22
+    ]
+   },
+   "cis_database": {
+    "median": 1969.438,
+    "min": 1942.577,
+    "max": 2023.598,
+    "runs": [
+     1942.577,
+     1948.987,
+     2023.598,
+     2003.647,
+     1969.438
+    ]
+   },
+   "advantage": 3.4916585340589545,
+   "winner": "cis_database"
+  },
+  {
+   "group": "Single call (one thread, .await)",
+   "metric": "bank_transfer p99",
+   "unit": "\u00b5s",
+   "better": "lower",
+   "oxmysql": {
+    "median": 14243.683,
+    "min": 12603.308,
+    "max": 14510.724,
+    "runs": [
+     14243.683,
+     12603.308,
+     14510.724,
+     13079.47,
+     14469.25
+    ]
+   },
+   "cis_database": {
+    "median": 7220.16,
+    "min": 6550.37,
+    "max": 8943.87,
+    "runs": [
+     6798.431,
+     7267.494,
+     8943.87,
+     7220.16,
+     6550.37
+    ]
+   },
+   "advantage": 1.9727655619820061,
+   "winner": "cis_database"
+  },
+  {
+   "group": "Live server, 64 players (80/20 mix)",
+   "metric": "calls per second",
+   "unit": "calls/s",
+   "better": "higher",
+   "oxmysql": {
+    "median": 228.18901537497257,
+    "min": 226.64343555634392,
+    "max": 228.497508947232,
+    "runs": [
+     228.18901537497257,
+     227.15919164059994,
+     226.64343555634392,
+     228.497508947232,
+     228.2709584301717
+    ]
+   },
+   "cis_database": {
+    "median": 232.89797987489146,
+    "min": 232.8597162492949,
+    "max": 234.36958755594694,
+    "runs": [
+     234.36958755594694,
+     234.26071017041073,
+     232.8597162492949,
+     232.89797987489146,
+     232.8648341421262
+    ]
+   },
+   "advantage": 1.0206362453169837,
+   "winner": "cis_database"
+  },
+  {
+   "group": "Live server, 64 players (80/20 mix)",
+   "metric": "mean latency",
+   "unit": "\u00b5s",
+   "better": "lower",
+   "oxmysql": {
+    "median": 6874.287695312489,
+    "min": 6518.374674218746,
+    "max": 7095.343888802075,
+    "runs": [
+     6874.287695312489,
+     7033.536173437505,
+     7095.343888802075,
+     6518.374674218746,
+     6681.712050781244
+    ]
+   },
+   "cis_database": {
+    "median": 963.7580359374998,
+    "min": 958.4929216145823,
+    "max": 997.7292067708335,
+    "runs": [
+     997.7292067708335,
+     963.3062526041681,
+     963.7580359374998,
+     970.5011067708348,
+     958.4929216145823
+    ]
+   },
+   "advantage": 7.132794165109602,
+   "winner": "cis_database"
+  },
+  {
+   "group": "Live server, 64 players (80/20 mix)",
+   "metric": "p50 latency",
+   "unit": "\u00b5s",
+   "better": "lower",
+   "oxmysql": {
+    "median": 5737.681,
+    "min": 5571.682,
+    "max": 6170.68,
+    "runs": [
+     5737.681,
+     5980.115,
+     6170.68,
+     5571.682,
+     5684.006
+    ]
+   },
+   "cis_database": {
+    "median": 142.575,
+    "min": 140.484,
+    "max": 144.454,
+    "runs": [
+     142.575,
+     140.924,
+     142.914,
+     144.454,
+     140.484
+    ]
+   },
+   "advantage": 40.243247413641946,
+   "winner": "cis_database"
+  },
+  {
+   "group": "Live server, 64 players (80/20 mix)",
+   "metric": "p99 latency",
+   "unit": "\u00b5s",
+   "better": "lower",
+   "oxmysql": {
+    "median": 24889.066,
+    "min": 19887.907,
+    "max": 32660.331,
+    "runs": [
+     32660.331,
+     22895.851,
+     24889.066,
+     19887.907,
+     25506.26
+    ]
+   },
+   "cis_database": {
+    "median": 7651.696,
+    "min": 7036.095,
+    "max": 9861.551,
+    "runs": [
+     9861.551,
+     7651.696,
+     7036.095,
+     7277.452,
+     7851.208
+    ]
+   },
+   "advantage": 3.2527515468466075,
+   "winner": "cis_database"
+  },
+  {
+   "group": "Live server, 64 players (80/20 mix)",
+   "metric": "max latency",
+   "unit": "\u00b5s",
+   "better": "lower",
+   "oxmysql": {
+    "median": 77904.667,
+    "min": 47197.078,
+    "max": 88532.021,
+    "runs": [
+     77904.667,
+     71473.522,
+     47197.078,
+     88532.021,
+     83171.353
+    ]
+   },
+   "cis_database": {
+    "median": 17150.546,
+    "min": 16692.723,
+    "max": 25589.395,
+    "runs": [
+     17150.546,
+     21816.901,
+     16781.089,
+     25589.395,
+     16692.723
+    ]
+   },
+   "advantage": 4.542401565524504,
+   "winner": "cis_database"
+  },
+  {
+   "group": "Live server, 64 players (80/20 mix)",
+   "metric": "long frames",
+   "unit": "frames",
+   "better": "lower",
+   "oxmysql": {
+    "median": 1.0,
+    "min": 0.0,
+    "max": 3.0,
+    "runs": [
+     1.0,
+     1.0,
+     0.0,
+     3.0,
+     1.0
+    ]
+   },
+   "cis_database": {
+    "median": 0.0,
+    "min": 0.0,
+    "max": 0.0,
+    "runs": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
+   "advantage": null,
+   "winner": "cis_database"
+  },
+  {
+   "group": "Live server, 64 players (80/20 mix)",
+   "metric": "worst frame",
+   "unit": "ms",
+   "better": "lower",
+   "oxmysql": {
+    "median": 81.103873,
+    "min": 58.96484,
+    "max": 86.228672,
+    "runs": [
+     81.103873,
+     67.115534,
+     58.96484,
+     86.045589,
+     86.228672
+    ]
+   },
+   "cis_database": {
+    "median": 55.088905,
+    "min": 53.695788,
+    "max": 57.868802,
+    "runs": [
+     55.585541,
+     57.868802,
+     55.088905,
+     53.97804,
+     53.695788
+    ]
+   },
+   "advantage": 1.4722360700398747,
+   "winner": "cis_database"
+  },
+  {
+   "group": "Live server, 64 players (80/20 mix)",
+   "metric": "time past the tick",
+   "unit": "ms",
+   "better": "lower",
+   "oxmysql": {
+    "median": 14.26679686500288,
+    "min": 0.0,
+    "max": 33.47018780500879,
+    "runs": [
+     14.26679686500288,
+     0.26900792500291,
+     0.0,
+     33.47018780500879,
+     19.43260327638482
+    ]
+   },
+   "cis_database": {
+    "median": 0.0,
+    "min": 0.0,
+    "max": 0.0,
+    "runs": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
+   "advantage": null,
+   "winner": "cis_database"
+  },
+  {
+   "group": "Live server, 128 players (80/20 mix)",
+   "metric": "calls per second",
+   "unit": "calls/s",
+   "better": "higher",
+   "oxmysql": {
+    "median": 457.1800321384823,
+    "min": 456.60617140828623,
+    "max": 457.7236344908627,
+    "runs": [
+     456.85134111789574,
+     456.60617140828623,
+     457.42722884158684,
+     457.7236344908627,
+     457.1800321384823
+    ]
+   },
+   "cis_database": {
+    "median": 465.56963731625495,
+    "min": 464.3118762626924,
+    "max": 467.13300990549743,
+    "runs": [
+     464.3118762626924,
+     465.56963731625495,
+     467.13300990549743,
+     466.0850912124746,
+     465.5252325551029
+    ]
+   },
+   "advantage": 1.0183507690362805,
+   "winner": "cis_database"
+  },
+  {
+   "group": "Live server, 128 players (80/20 mix)",
+   "metric": "mean latency",
+   "unit": "\u00b5s",
+   "better": "lower",
+   "oxmysql": {
+    "median": 10869.19364700516,
+    "min": 10384.299825000002,
+    "max": 11500.121050520836,
+    "runs": [
+     10384.299825000002,
+     11500.121050520836,
+     11043.399096093764,
+     10869.19364700516,
+     10783.377838932238
+    ]
+   },
+   "cis_database": {
+    "median": 1248.4335287760377,
+    "min": 1194.2481605468706,
+    "max": 1347.60371367187,
+    "runs": [
+     1347.60371367187,
+     1305.210500130206,
+     1196.372685677081,
+     1194.2481605468706,
+     1248.4335287760377
+    ]
+   },
+   "advantage": 8.706265408989216,
+   "winner": "cis_database"
+  },
+  {
+   "group": "Live server, 128 players (80/20 mix)",
+   "metric": "p50 latency",
+   "unit": "\u00b5s",
+   "better": "lower",
+   "oxmysql": {
+    "median": 9469.334,
+    "min": 8676.018,
+    "max": 10103.585,
+    "runs": [
+     8676.018,
+     10103.585,
+     9720.273,
+     9469.334,
+     9352.663
+    ]
+   },
+   "cis_database": {
+    "median": 125.304,
+    "min": 124.414,
+    "max": 130.254,
+    "runs": [
+     126.443,
+     124.714,
+     125.304,
+     130.254,
+     124.414
+    ]
+   },
+   "advantage": 75.57088361105791,
+   "winner": "cis_database"
+  },
+  {
+   "group": "Live server, 128 players (80/20 mix)",
+   "metric": "p99 latency",
+   "unit": "\u00b5s",
+   "better": "lower",
+   "oxmysql": {
+    "median": 37401.785,
+    "min": 36405.296,
+    "max": 49749.528,
+    "runs": [
+     49749.528,
+     39080.193,
+     36524.465,
+     37401.785,
+     36405.296
+    ]
+   },
+   "cis_database": {
+    "median": 11848.394,
+    "min": 9190.417,
+    "max": 14107.345,
+    "runs": [
+     14107.345,
+     12514.357,
+     10710.192,
+     9190.417,
+     11848.394
+    ]
+   },
+   "advantage": 3.1566965953360433,
+   "winner": "cis_database"
+  },
+  {
+   "group": "Live server, 128 players (80/20 mix)",
+   "metric": "max latency",
+   "unit": "\u00b5s",
+   "better": "lower",
+   "oxmysql": {
+    "median": 98625.362,
+    "min": 92406.464,
+    "max": 112821.162,
+    "runs": [
+     97422.086,
+     92406.464,
+     112821.162,
+     108035.987,
+     98625.362
+    ]
+   },
+   "cis_database": {
+    "median": 21034.76,
+    "min": 16725.208,
+    "max": 29808.847,
+    "runs": [
+     20421.393,
+     22086.228,
+     16725.208,
+     29808.847,
+     21034.76
+    ]
+   },
+   "advantage": 4.6886849196282725,
+   "winner": "cis_database"
+  },
+  {
+   "group": "Live server, 128 players (80/20 mix)",
+   "metric": "long frames",
+   "unit": "frames",
+   "better": "lower",
+   "oxmysql": {
+    "median": 2.0,
+    "min": 1.0,
+    "max": 6.0,
+    "runs": [
+     2.0,
+     5.0,
+     2.0,
+     6.0,
+     1.0
+    ]
+   },
+   "cis_database": {
+    "median": 0.0,
+    "min": 0.0,
+    "max": 0.0,
+    "runs": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
+   "advantage": null,
+   "winner": "cis_database"
+  },
+  {
+   "group": "Live server, 128 players (80/20 mix)",
+   "metric": "worst frame",
+   "unit": "ms",
+   "better": "lower",
+   "oxmysql": {
+    "median": 103.685311,
+    "min": 92.798295,
+    "max": 124.288934,
+    "runs": [
+     124.288934,
+     92.798295,
+     104.072416,
+     103.685311,
+     93.182764
+    ]
+   },
+   "cis_database": {
+    "median": 55.696574,
+    "min": 55.185226,
+    "max": 56.616547,
+    "runs": [
+     55.696574,
+     56.209222,
+     55.185226,
+     56.616547,
+     55.656354
+    ]
+   },
+   "advantage": 1.861610213224246,
+   "winner": "cis_database"
+  },
+  {
+   "group": "Live server, 128 players (80/20 mix)",
+   "metric": "time past the tick",
+   "unit": "ms",
+   "better": "lower",
+   "oxmysql": {
+    "median": 59.71419362501457,
+    "min": 26.38669527638482,
+    "max": 122.39321361001754,
+    "runs": [
+     60.97058273000579,
+     59.71419362501457,
+     41.72832477387516,
+     122.39321361001754,
+     26.38669527638482
+    ]
+   },
+   "cis_database": {
+    "median": 0.0,
+    "min": 0.0,
+    "max": 0.0,
+    "runs": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
+   "advantage": null,
+   "winner": "cis_database"
+  },
+  {
+   "group": "Live server, 256 players (80/20 mix)",
+   "metric": "calls per second",
+   "unit": "calls/s",
+   "better": "higher",
+   "oxmysql": {
+    "median": 868.2773550321126,
+    "min": 863.5171923021024,
+    "max": 873.829793011908,
+    "runs": [
+     870.8832132492221,
+     863.5171923021024,
+     873.829793011908,
+     863.6577086994555,
+     868.2773550321126
+    ]
+   },
+   "cis_database": {
+    "median": 917.9973546877064,
+    "min": 910.495536256066,
+    "max": 918.8559315679273,
+    "runs": [
+     910.495536256066,
+     918.8559315679273,
+     912.9194310771193,
+     917.9973546877064,
+     918.1173635949538
+    ]
+   },
+   "advantage": 1.0572628082115016,
+   "winner": "cis_database"
+  },
+  {
+   "group": "Live server, 256 players (80/20 mix)",
+   "metric": "mean latency",
+   "unit": "\u00b5s",
+   "better": "lower",
+   "oxmysql": {
+    "median": 18003.530675846407,
+    "min": 16759.257309049503,
+    "max": 20740.543565559867,
+    "runs": [
+     16759.257309049503,
+     20740.543565559867,
+     18211.049123046854,
+     17997.52763906246,
+     18003.530675846407
+    ]
+   },
+   "cis_database": {
+    "median": 2294.5792919921823,
+    "min": 2180.404912695309,
+    "max": 2460.4890412109366,
+    "runs": [
+     2281.0939998698013,
+     2294.5792919921823,
+     2460.4890412109366,
+     2324.341085546864,
+     2180.404912695309
+    ]
+   },
+   "advantage": 7.846113986418625,
+   "winner": "cis_database"
+  },
+  {
+   "group": "Live server, 256 players (80/20 mix)",
+   "metric": "p50 latency",
+   "unit": "\u00b5s",
+   "better": "lower",
+   "oxmysql": {
+    "median": 15621.213,
+    "min": 14593.234,
+    "max": 17910.754,
+    "runs": [
+     14593.234,
+     17910.754,
+     15995.776,
+     14976.985,
+     15621.213
+    ]
+   },
+   "cis_database": {
+    "median": 124.633,
+    "min": 121.903,
+    "max": 128.403,
+    "runs": [
+     123.774,
+     126.294,
+     128.403,
+     124.633,
+     121.903
+    ]
+   },
+   "advantage": 125.33769547391141,
+   "winner": "cis_database"
+  },
+  {
+   "group": "Live server, 256 players (80/20 mix)",
+   "metric": "p99 latency",
+   "unit": "\u00b5s",
+   "better": "lower",
+   "oxmysql": {
+    "median": 72571.916,
+    "min": 62861.113,
+    "max": 80322.122,
+    "runs": [
+     72571.916,
+     76569.699,
+     62861.113,
+     80322.122,
+     65166.06
+    ]
+   },
+   "cis_database": {
+    "median": 17900.998,
+    "min": 15564.032,
+    "max": 18426.677,
+    "runs": [
+     17900.998,
+     15907.128,
+     17991.184,
+     18426.677,
+     15564.032
+    ]
+   },
+   "advantage": 4.05407095179833,
+   "winner": "cis_database"
+  },
+  {
+   "group": "Live server, 256 players (80/20 mix)",
+   "metric": "max latency",
+   "unit": "\u00b5s",
+   "better": "lower",
+   "oxmysql": {
+    "median": 113463.074,
+    "min": 104704.808,
+    "max": 134379.7,
+    "runs": [
+     106428.439,
+     134379.7,
+     117446.266,
+     113463.074,
+     104704.808
+    ]
+   },
+   "cis_database": {
+    "median": 32242.608,
+    "min": 28549.668,
+    "max": 34166.938,
+    "runs": [
+     34166.938,
+     28549.668,
+     32242.608,
+     33110.553,
+     31929.916
+    ]
+   },
+   "advantage": 3.51904144974873,
+   "winner": "cis_database"
+  },
+  {
+   "group": "Live server, 256 players (80/20 mix)",
+   "metric": "long frames",
+   "unit": "frames",
+   "better": "lower",
+   "oxmysql": {
+    "median": 9.0,
+    "min": 8.0,
+    "max": 13.0,
+    "runs": [
+     9.0,
+     13.0,
+     8.0,
+     9.0,
+     9.0
+    ]
+   },
+   "cis_database": {
+    "median": 0.0,
+    "min": 0.0,
+    "max": 0.0,
+    "runs": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
+   "advantage": null,
+   "winner": "cis_database"
+  },
+  {
+   "group": "Live server, 256 players (80/20 mix)",
+   "metric": "worst frame",
+   "unit": "ms",
+   "better": "lower",
+   "oxmysql": {
+    "median": 123.477135,
+    "min": 121.619288,
+    "max": 132.239847,
+    "runs": [
+     123.477135,
+     126.906931,
+     132.239847,
+     123.220008,
+     121.619288
+    ]
+   },
+   "cis_database": {
+    "median": 57.89868,
+    "min": 56.248671,
+    "max": 65.459606,
+    "runs": [
+     56.379083,
+     57.89868,
+     65.459606,
+     58.887491,
+     56.248671
+    ]
+   },
+   "advantage": 2.1326416249904145,
+   "winner": "cis_database"
+  },
+  {
+   "group": "Live server, 256 players (80/20 mix)",
+   "metric": "time past the tick",
+   "unit": "ms",
+   "better": "lower",
+   "oxmysql": {
+    "median": 218.15866978502606,
+    "min": 197.5921394150263,
+    "max": 252.99856902503785,
+    "runs": [
+     218.15866978502606,
+     252.99856902503785,
+     198.69926709550057,
+     197.5921394150263,
+     223.19914748746336
+    ]
+   },
+   "cis_database": {
+    "median": 0.0,
+    "min": 0.0,
+    "max": 0.0,
+    "runs": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
+   "advantage": null,
+   "winner": "cis_database"
+  },
+  {
+   "group": "Join storm (128 players at once)",
+   "metric": "all joined",
+   "unit": "ms",
+   "better": "lower",
+   "oxmysql": {
+    "median": 501.843421,
+    "min": 446.194534,
+    "max": 558.745249,
+    "runs": [
+     501.843421,
+     558.745249,
+     497.647501,
+     551.620747,
+     446.194534
+    ]
+   },
+   "cis_database": {
+    "median": 238.175465,
+    "min": 236.64777,
+    "max": 302.706326,
+    "runs": [
+     302.706326,
+     286.291904,
+     237.893005,
+     236.64777,
+     238.175465
+    ]
+   },
+   "advantage": 2.1070323973126284,
+   "winner": "cis_database"
+  },
+  {
+   "group": "Join storm (128 players at once)",
+   "metric": "p99 join",
+   "unit": "\u00b5s",
+   "better": "lower",
+   "oxmysql": {
+    "median": 404132.622,
+    "min": 374142.624,
+    "max": 472813.029,
+    "runs": [
+     404132.622,
+     458585.59,
+     402195.437,
+     472813.029,
+     374142.624
+    ]
+   },
+   "cis_database": {
+    "median": 172869.111,
+    "min": 158323.153,
+    "max": 220674.778,
+    "runs": [
+     220674.778,
+     187766.483,
+     172869.111,
+     158323.153,
+     167398.073
+    ]
+   },
+   "advantage": 2.3377954549670816,
+   "winner": "cis_database"
+  },
+  {
+   "group": "Join storm (128 players at once)",
+   "metric": "long frames",
+   "unit": "frames",
+   "better": "lower",
+   "oxmysql": {
+    "median": 1.0,
+    "min": 0.0,
+    "max": 2.0,
+    "runs": [
+     1.0,
+     0.0,
+     1.0,
+     2.0,
+     0.0
+    ]
+   },
+   "cis_database": {
+    "median": 0.0,
+    "min": 0.0,
+    "max": 0.0,
+    "runs": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
+   "advantage": null,
+   "winner": "cis_database"
+  },
+  {
+   "group": "Join storm (128 players at once)",
+   "metric": "worst frame",
+   "unit": "ms",
+   "better": "lower",
+   "oxmysql": {
+    "median": 77.664944,
+    "min": 58.284081,
+    "max": 101.9292,
+    "runs": [
+     77.664944,
+     66.067482,
+     101.301115,
+     101.9292,
+     58.284081
+    ]
+   },
+   "cis_database": {
+    "median": 58.319148,
+    "min": 54.426097,
+    "max": 64.560673,
+    "runs": [
+     64.560673,
+     54.426097,
+     58.319148,
+     54.947927,
+     60.381291
+    ]
+   },
+   "advantage": 1.3317228845661464,
+   "winner": "cis_database"
+  },
+  {
+   "group": "Save storm (256 players at once)",
+   "metric": "all saved",
+   "unit": "ms",
+   "better": "lower",
+   "oxmysql": {
+    "median": 590.956085,
+    "min": 562.033313,
+    "max": 722.238229,
+    "runs": [
+     590.956085,
+     674.682168,
+     722.238229,
+     575.180529,
+     562.033313
+    ]
+   },
+   "cis_database": {
+    "median": 405.210539,
+    "min": 402.105904,
+    "max": 414.394908,
+    "runs": [
+     406.396112,
+     402.105904,
+     404.217856,
+     414.394908,
+     405.210539
+    ]
+   },
+   "advantage": 1.458392682624674,
+   "winner": "cis_database"
+  },
+  {
+   "group": "Save storm (256 players at once)",
+   "metric": "p99 save",
+   "unit": "\u00b5s",
+   "better": "lower",
+   "oxmysql": {
+    "median": 461260.942,
+    "min": 414190.075,
+    "max": 608596.566,
+    "runs": [
+     437804.391,
+     578671.102,
+     608596.566,
+     461260.942,
+     414190.075
+    ]
+   },
+   "cis_database": {
+    "median": 306778.575,
+    "min": 289922.156,
+    "max": 332072.065,
+    "runs": [
+     306778.575,
+     303483.979,
+     314432.033,
+     332072.065,
+     289922.156
+    ]
+   },
+   "advantage": 1.5035630894367378,
+   "winner": "cis_database"
+  },
+  {
+   "group": "Save storm (256 players at once)",
+   "metric": "long frames",
+   "unit": "frames",
+   "better": "lower",
+   "oxmysql": {
+    "median": 1.0,
+    "min": 0.0,
+    "max": 3.0,
+    "runs": [
+     1.0,
+     1.0,
+     3.0,
+     0.0,
+     1.0
+    ]
+   },
+   "cis_database": {
+    "median": 0.0,
+    "min": 0.0,
+    "max": 1.0,
+    "runs": [
+     0.0,
+     0.0,
+     0.0,
+     1.0,
+     0.0
+    ]
+   },
+   "advantage": null,
+   "winner": "cis_database"
+  },
+  {
+   "group": "Save storm (256 players at once)",
+   "metric": "worst frame",
+   "unit": "ms",
+   "better": "lower",
+   "oxmysql": {
+    "median": 107.892899,
+    "min": 63.211856,
+    "max": 147.247659,
+    "runs": [
+     147.247659,
+     113.53126,
+     104.029653,
+     63.211856,
+     107.892899
+    ]
+   },
+   "cis_database": {
+    "median": 60.694492,
+    "min": 57.584706,
+    "max": 71.21224,
+    "runs": [
+     61.283087,
+     60.694492,
+     57.584706,
+     71.21224,
+     57.750654
+    ]
+   },
+   "advantage": 1.7776390483670248,
+   "winner": "cis_database"
+  },
+  {
+   "group": "Payday loop (5000 sequential updates)",
+   "metric": "wall time",
+   "unit": "ms",
+   "better": "lower",
+   "oxmysql": {
+    "median": 9535.925278,
+    "min": 9456.75325,
+    "max": 10014.315783,
+    "runs": [
+     9508.836387,
+     10014.315783,
+     9793.293183,
+     9535.925278,
+     9456.75325
+    ]
+   },
+   "cis_database": {
+    "median": 9903.313826,
+    "min": 9632.590727,
+    "max": 10085.822237,
+    "runs": [
+     10085.822237,
+     9939.830465,
+     9903.313826,
+     9842.756046,
+     9632.590727
+    ]
+   },
+   "advantage": 0.9629024633112744,
+   "winner": "oxmysql"
+  },
+  {
+   "group": "Payday loop (5000 sequential updates)",
+   "metric": "worst frame",
+   "unit": "ms",
+   "better": "lower",
+   "oxmysql": {
+    "median": 81.965259,
+    "min": 65.712568,
+    "max": 94.672308,
+    "runs": [
+     94.672308,
+     83.538442,
+     81.965259,
+     65.712568,
+     73.891784
+    ]
+   },
+   "cis_database": {
+    "median": 61.552401,
+    "min": 58.181511,
+    "max": 68.924098,
+    "runs": [
+     62.868994,
+     59.123546,
+     61.552401,
+     58.181511,
+     68.924098
+    ]
+   },
+   "advantage": 1.331633822050256,
+   "winner": "cis_database"
+  },
+  {
+   "group": "Saturation (32 threads, 10 s)",
+   "metric": "calls per second",
+   "unit": "calls/s",
+   "better": "higher",
+   "oxmysql": {
+    "median": 2076.522691401672,
+    "min": 2037.9475785685029,
+    "max": 2121.4341313678433,
+    "runs": [
+     2063.8125897854675,
+     2037.9475785685029,
+     2102.784312523497,
+     2076.522691401672,
+     2121.4341313678433
+    ]
+   },
+   "cis_database": {
+    "median": 3722.4946166371865,
+    "min": 3675.456177542079,
+    "max": 3834.599939828884,
+    "runs": [
+     3675.456177542079,
+     3693.1461167538137,
+     3759.400689053772,
+     3722.4946166371865,
+     3834.599939828884
+    ]
+   },
+   "advantage": 1.7926578081959066,
+   "winner": "cis_database"
+  },
+  {
+   "group": "Saturation (32 threads, 10 s)",
+   "metric": "worst frame",
+   "unit": "ms",
+   "better": "lower",
+   "oxmysql": {
+    "median": 118.990539,
+    "min": 111.005343,
+    "max": 130.983889,
+    "runs": [
+     118.990539,
+     130.983889,
+     116.936318,
+     111.005343,
+     127.688825
+    ]
+   },
+   "cis_database": {
+    "median": 59.232148,
+    "min": 57.375514,
+    "max": 60.018577,
+    "runs": [
+     59.274577,
+     59.232148,
+     60.018577,
+     58.033277,
+     57.375514
+    ]
+   },
+   "advantage": 2.008884415267196,
+   "winner": "cis_database"
+  },
+  {
+   "group": "Bulk import",
+   "metric": "20k players + 40k vehicles",
+   "unit": "ms",
+   "better": "lower",
+   "oxmysql": {
+    "median": 5873.747285,
+    "min": 5769.036544,
+    "max": 6098.26184,
+    "runs": [
+     6098.26184,
+     5844.580227,
+     6073.346246,
+     5873.747285,
+     5769.036544
+    ]
+   },
+   "cis_database": {
+    "median": 9455.456403,
+    "min": 9276.097256,
+    "max": 9650.153581,
+    "runs": [
+     9616.87398,
+     9428.800496,
+     9650.153581,
+     9276.097256,
+     9455.456403
+    ]
+   },
+   "advantage": 0.6212018790691473,
+   "winner": "oxmysql"
+  },
+  {
+   "group": "Idle server",
+   "metric": "tick",
+   "unit": "ms",
+   "better": "lower",
+   "oxmysql": {
+    "median": 50.146526075,
+    "min": 50.09606872361808,
+    "max": 50.17123706499999,
+    "runs": [
+     50.13707613500001,
+     50.146526075,
+     50.15132161306533,
+     50.17123706499999,
+     50.09606872361808
+    ]
+   },
+   "cis_database": {
+    "median": 50.13642103517588,
+    "min": 50.10096782412056,
+    "max": 50.20688146733666,
+    "runs": [
+     50.13642103517588,
+     50.11318783919597,
+     50.20688146733666,
+     50.15498849748743,
+     50.10096782412056
+    ]
+   },
+   "advantage": 1.0002015508808861,
+   "winner": "cis_database"
+  },
+  {
+   "group": "FXServer hitch warnings (whole boot, startup included)",
+   "metric": "warnings",
+   "unit": "count",
+   "better": "lower",
+   "oxmysql": {
+    "median": 0.0,
+    "min": 0.0,
+    "max": 1.0,
+    "runs": [
+     0.0,
+     0.0,
+     1.0,
+     1.0,
+     0.0
+    ]
+   },
+   "cis_database": {
+    "median": 2.0,
+    "min": 1.0,
+    "max": 2.0,
+    "runs": [
+     2.0,
+     1.0,
+     2.0,
+     1.0,
+     2.0
+    ]
+   },
+   "advantage": 0.0,
+   "winner": "oxmysql"
+  },
+  {
+   "group": "FXServer hitch warnings (whole boot, startup included)",
+   "metric": "longest",
+   "unit": "ms",
+   "better": "lower",
+   "oxmysql": {
+    "median": 0.0,
+    "min": 0.0,
+    "max": 196.0,
+    "runs": [
+     0.0,
+     0.0,
+     196.0,
+     157.0,
+     0.0
+    ]
+   },
+   "cis_database": {
+    "median": 509.0,
+    "min": 302.0,
+    "max": 542.0,
+    "runs": [
+     436.0,
+     509.0,
+     538.0,
+     542.0,
+     302.0
+    ]
+   },
+   "advantage": 0.0,
+   "winner": "oxmysql"
+  },
+  {
+   "group": "CPU for the measured workload",
+   "metric": "FXServer",
+   "unit": "s",
+   "better": "lower",
+   "oxmysql": {
+    "median": 54.27,
+    "min": 52.71,
+    "max": 55.17,
+    "runs": [
+     54.63,
+     55.17,
+     54.27,
+     53.38,
+     52.71
+    ]
+   },
+   "cis_database": {
+    "median": 36.28,
+    "min": 35.46,
+    "max": 36.76,
+    "runs": [
+     36.6,
+     36.28,
+     36.76,
+     35.87,
+     35.46
+    ]
+   },
+   "advantage": 1.4958654906284454,
+   "winner": "cis_database"
+  },
+  {
+   "group": "CPU for the measured workload",
+   "metric": "MariaDB",
+   "unit": "s",
+   "better": "lower",
+   "oxmysql": {
+    "median": 31.05,
+    "min": 29.41,
+    "max": 31.72,
+    "runs": [
+     31.23,
+     31.72,
+     31.05,
+     30.12,
+     29.41
+    ]
+   },
+   "cis_database": {
+    "median": 7.37,
+    "min": 7.05,
+    "max": 7.92,
+    "runs": [
+     7.53,
+     7.37,
+     7.92,
+     7.17,
+     7.05
+    ]
+   },
+   "advantage": 4.21302578018996,
+   "winner": "cis_database"
+  }
+ ],
+ "checksums": {
+  "distinct": 1,
+  "cis_maria_match": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "ox_maria_match": [
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "cis_no_copy_runs": []
+ },
+ "errors": {
+  "oxmysql": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "cis_database": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ]
+ }
+}

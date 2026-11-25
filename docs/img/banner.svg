@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" width="1200" height="300" role="img" aria-label="cis_database: SQLite for FiveM, with a MariaDB replica. cisoko.net">
+  <style>
+    .glow { animation: breathe 6s ease-in-out infinite; }
+    .drop { animation: drop 4s cubic-bezier(.5,0,.8,.4) infinite; opacity: 0; }
+    .band { animation: band 4s ease-out infinite; stroke-opacity: 0; }
+    .b2 { animation-delay: .15s; }
+    .b3 { animation-delay: .3s; }
+    .ring { animation: ring 4s ease-out infinite; opacity: 0; transform-origin: 0 -58px; transform-box: view-box; }
+    .shine { animation: shine 4s ease-in-out infinite; }
+    @keyframes breathe { 0%, 100% { opacity: .7; } 50% { opacity: 1; } }
+    @keyframes drop {
+      0% { transform: translateY(-120px); opacity: 0; }
+      8% { opacity: 1; }
+      22% { transform: translateY(-58px); opacity: 1; }
+      26%, 100% { transform: translateY(-58px); opacity: 0; }
+    }
+    @keyframes ring {
+      0%, 22% { transform: scale(.4); opacity: 0; }
+      26% { opacity: .9; }
+      48%, 100% { transform: scale(1.35); opacity: 0; }
+    }
+    @keyframes band { 0%, 24% { stroke-opacity: 0; } 32% { stroke-opacity: 1; } 60%, 100% { stroke-opacity: 0; } }
+    @keyframes shine { 0%, 30% { transform: translateX(-700px); } 75%, 100% { transform: translateX(700px); } }
+    @media (prefers-reduced-motion: reduce) {
+      .glow, .drop, .band, .ring, .shine { animation: none; }
+    }
+  </style>
+  <defs>
+    <radialGradient id="g" cx="25%" cy="50%" r="75%">
+      <stop offset="0" stop-color="#D8A83E" stop-opacity=".24"/>
+      <stop offset=".5" stop-color="#D8A83E" stop-opacity=".05"/>
+      <stop offset="1" stop-color="#090909" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="s" x1="0" x2="1">
+      <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+      <stop offset=".5" stop-color="#fff" stop-opacity=".55"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="t">
+      <text x="422" y="200" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="26" font-weight="500" letter-spacing="1">SQLite for FiveM, with a MariaDB replica</text>
+    </clipPath>
+  </defs>
+  <rect width="1200" height="300" rx="10" fill="#090909"/>
+  <rect class="glow" width="1200" height="300" rx="10" fill="url(#g)"/>
+  <g fill="none" stroke="#D8A83E" stroke-width="5" transform="translate(300 150) scale(.8)">
+    <ellipse cx="0" cy="-58" rx="78" ry="22"/>
+    <path d="M-78 -58v116c0 12 35 22 78 22s78-10 78-22v-116"/>
+    <path d="M-78 0c0 12 35 22 78 22s78-10 78-22"/>
+    <g stroke="#FFE3A3" stroke-width="7">
+      <ellipse class="band" cx="0" cy="-58" rx="78" ry="22"/>
+      <path class="band b2" d="M-78 0c0 12 35 22 78 22s78-10 78-22"/>
+      <path class="band b3" d="M-78 58c0 12 35 22 78 22s78-10 78-22"/>
+    </g>
+    <ellipse class="ring" cx="0" cy="-58" rx="78" ry="22" stroke="#FFE3A3" stroke-width="3"/>
+    <circle class="drop" cx="0" cy="0" r="7" fill="#FFE3A3" stroke="none"/>
+  </g>
+  <text x="420" y="152" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="72" font-weight="700" fill="#F2F6FC" letter-spacing="-1">cis_database</text>
+  <text x="422" y="200" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="26" font-weight="500" fill="#D8A83E" letter-spacing="1">SQLite for FiveM, with a MariaDB replica</text>
+  <g clip-path="url(#t)">
+    <rect class="shine" x="422" y="170" width="260" height="40" fill="url(#s)"/>
+  </g>
+  <text x="1170" y="276" text-anchor="end" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="18" font-weight="500" fill="#8A8F98" letter-spacing="1">cisoko.net</text>
+</svg>

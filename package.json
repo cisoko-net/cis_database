@@ -1,0 +1,14 @@
+{
+  "name": "cis_database",
+  "private": true,
+  "version": "1.0.0",
+  "license": "SEE LICENSE IN LICENSE.md",
+  "description": "SQLite game database for FXServer with a MariaDB copy; a drop-in for oxmysql",
+  "scripts": {
+    "test": "node tests/run.js"
+  },
+  "dependencies": {
+    "mysql2": "3.24.6",
+    "sql.js": "1.11.0"
+  }
+}

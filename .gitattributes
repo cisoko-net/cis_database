@@ -1,0 +1,17 @@
+* text=auto eol=lf
+
+# Source archives (GitHub "Download ZIP", release source code) carry what a
+# server runs, like cis_database.zip from the release workflow. Tests,
+# benchmarks, build tooling and the dashboard sources stay in the repository.
+/tests/ export-ignore
+/bench/ export-ignore
+/tools/ export-ignore
+/.github/ export-ignore
+/web/src/ export-ignore
+/web/public/ export-ignore
+/web/index.html export-ignore
+/web/package.json export-ignore
+/web/package-lock.json export-ignore
+/web/tsconfig.json export-ignore
+/web/vite.config.ts export-ignore
+/web/.gitignore export-ignore

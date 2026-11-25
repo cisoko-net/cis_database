@@ -1,0 +1,772 @@
+[
+  {
+    "repo": "ImagicTheCat/vRP",
+    "sha": "8d35fdf4d8b73b368deac90740d0553c68348f27",
+    "group": "named"
+  },
+  {
+    "repo": "esx-framework/esx_core",
+    "sha": "03c3fc7cf41c91663d24b55b7989bc12e39ebc98",
+    "group": "named"
+  },
+  {
+    "repo": "esx-framework/ESX-Legacy-Addons",
+    "sha": "e998f3db89d9da26dc897904b68f6fb87c183286",
+    "group": "named"
+  },
+  {
+    "repo": "Qbox-project/qbx_core",
+    "sha": "58b345e2b53be98928c3e4ee44b100613ac9257f",
+    "group": "named"
+  },
+  {
+    "repo": "Qbox-project/qbx_police",
+    "sha": "7fa438fc175443692e87739a9140f0c6b770f98f",
+    "group": "named"
+  },
+  {
+    "repo": "Qbox-project/qbx_vehicleshop",
+    "sha": "9502c6494ccd5385d9043ff094973a3ccfeca96c",
+    "group": "named"
+  },
+  {
+    "repo": "Qbox-project/qbx_properties",
+    "sha": "9bbdb43d1c2d89ab6f90b5d6ec7f13cb0226566b",
+    "group": "named"
+  },
+  {
+    "repo": "Qbox-project/qbx_garages",
+    "sha": "3dcd90313212d3867fd92b5b40447424dc42dc9e",
+    "group": "named"
+  },
+  {
+    "repo": "Qbox-project/qbx_management",
+    "sha": "8e6913003d73a1e425bafae1295d8d3782636482",
+    "group": "named"
+  },
+  {
+    "repo": "Qbox-project/qbxsql",
+    "sha": "97c56c3813df570601c8e2106f826e1b7ea2d648",
+    "group": "named"
+  },
+  {
+    "repo": "Qbox-project/qbx_db_backup",
+    "sha": "c6e50ddca2904dcbdb957de6c2322596178bead0",
+    "group": "named"
+  },
+  {
+    "repo": "Qbox-project/qbx_mechanicjob",
+    "sha": "df4f23fcd0716a4e5e35c7ee6b39f48e93f232f9",
+    "group": "named"
+  },
+  {
+    "repo": "Qbox-project/qbx_vehicles",
+    "sha": "571282900c229a5caf75b1aff679ba4ec0456eb0",
+    "group": "named"
+  },
+  {
+    "repo": "Qbox-project/qbx_adminmenu",
+    "sha": "0dcce39d238b7c00a23873c7e68f7ed6503e908a",
+    "group": "named"
+  },
+  {
+    "repo": "Qbox-project/qbx_spawn",
+    "sha": "41654937969da6ad7b9d35fafa9bd2ab8fba4d5c",
+    "group": "named"
+  },
+  {
+    "repo": "Qbox-project/qbx_weed",
+    "sha": "04fe6bac0fdbfce9224f3f848ee30cde933f60ae",
+    "group": "named"
+  },
+  {
+    "repo": "Qbox-project/qbx_scrapyard",
+    "sha": "f175d09f2c2632404d47a116e17779d23fffd711",
+    "group": "named"
+  },
+  {
+    "repo": "Qbox-project/qbx_npwd",
+    "sha": "c0e54a8560b26256b55e010b6ea71dcf003192c7",
+    "group": "named"
+  },
+  {
+    "repo": "Qbox-project/qbx_drugs",
+    "sha": "997e5aa208715910c24603f2bfdfc6bc46a72da2",
+    "group": "named"
+  },
+  {
+    "repo": "Qbox-project/qbx_pawnshop",
+    "sha": "7ced9287b20fbb1e11c713884f5f2e811452a30e",
+    "group": "named"
+  },
+  {
+    "repo": "Qbox-project/qbx_lapraces",
+    "sha": "5b7d8339ffac2203877be2ffa6cbaa8ea7d6f20e",
+    "group": "named"
+  },
+  {
+    "repo": "Qbox-project/npwd_qbx_mail",
+    "sha": "150532669293dd4eb1756fa66270544319c76faf",
+    "group": "named"
+  },
+  {
+    "repo": "Qbox-project/qbx_vehiclesales",
+    "sha": "123ede54998453627277b66c610ac1e16a324594",
+    "group": "named"
+  },
+  {
+    "repo": "Qbox-project/npwd_qbx_garages",
+    "sha": "54fea7504303ed9129443118c39bf7d56a2f9b46",
+    "group": "named"
+  },
+  {
+    "repo": "overextended/ox_inventory",
+    "sha": "b7b9e31d95c6a50cdd8deaddf27e8747af593764",
+    "group": "named"
+  },
+  {
+    "repo": "overextended/ox_doorlock",
+    "sha": "553e85d9dd2999b6e4ecebc96ce9d76acf0b12af",
+    "group": "named"
+  },
+  {
+    "repo": "overextended/ox_property",
+    "sha": "465f48f66aafb2994c4e87aabd3ab9fc48f04c0b",
+    "group": "named"
+  },
+  {
+    "repo": "overextended/ox_vehicledealer",
+    "sha": "3900bea8debc210c38c165a82e34b4e54862d421",
+    "group": "named"
+  },
+  {
+    "repo": "overextended/ox_core-example",
+    "sha": "fb7df86efbddca0f191aac8ea253099a1cda8442",
+    "group": "named"
+  },
+  {
+    "repo": "ND-Framework/ND_Core",
+    "sha": "0e6caf7996fbf7a1d01f2d8f4eec2f4920f3343c",
+    "group": "named"
+  },
+  {
+    "repo": "ND-Framework/ND_MDT",
+    "sha": "e4173ad0eaa0275684fc066ef707cbd2fd8e2bbd",
+    "group": "named"
+  },
+  {
+    "repo": "ND-Framework/ND_Banking",
+    "sha": "77e21ea20b90eb4233c4781b313099c7f84f3151",
+    "group": "named"
+  },
+  {
+    "repo": "ND-Framework/ND_Property",
+    "sha": "7298f0368beb8a1cce94897cb30a60075ea6d690",
+    "group": "named"
+  },
+  {
+    "repo": "project-error/npwd",
+    "sha": "0f08eebbb628005aef68528a9268cd360bb163e2",
+    "group": "named"
+  },
+  {
+    "repo": "project-error/pefcl",
+    "sha": "4915bd8e7e2903fe39b8db5b35e028e9e7475778",
+    "group": "named"
+  },
+  {
+    "repo": "project-error/pe-fake-plate",
+    "sha": "6c96406e07500e52688c295c505de9a474736791",
+    "group": "named"
+  },
+  {
+    "repo": "project-error/pe-environment",
+    "sha": "ee257ee885a361d2a2bfc518a9d5bd94e4e33794",
+    "group": "named"
+  },
+  {
+    "repo": "project-error/pe-core",
+    "sha": "6ebcabe91d1d7bde63360643e5e763b42743c3b2",
+    "group": "named"
+  },
+  {
+    "repo": "Project-Sloth/ps-adminmenu",
+    "sha": "5157d513e2cd22e6d04305643aaa806106db6523",
+    "group": "named"
+  },
+  {
+    "repo": "Project-Sloth/ps_lib",
+    "sha": "03ef1861d34a977b4374b4cf20bbaa806e154833",
+    "group": "named"
+  },
+  {
+    "repo": "Renewed-Scripts/Renewed-Banking",
+    "sha": "e4c3c63fdec03a6e40a964c11a6d1908f05baec3",
+    "group": "named"
+  },
+  {
+    "repo": "Renewed-Scripts/Renewed-Lib",
+    "sha": "2f3f09c7c81c9c4d6c3c0bca404de1673683f3be",
+    "group": "named"
+  },
+  {
+    "repo": "iLLeniumStudios/illenium-appearance",
+    "sha": "1b003ec169b15f145d519438ba7c6454bf746f27",
+    "group": "named"
+  },
+  {
+    "repo": "qbcore-fivem/qb-core",
+    "sha": "9b3cddcce93e5e12cbcf6b47b866b687d32ac7bf",
+    "group": "sample"
+  },
+  {
+    "repo": "AmirrezaJaberi/FIREAC",
+    "sha": "4a1190438780852eb4f8a7642050c5d18b70b4aa",
+    "group": "sample"
+  },
+  {
+    "repo": "jevajs/Jeva",
+    "sha": "ee0218ccb52d9a48bb3f391501402997c3fcfbd8",
+    "group": "sample"
+  },
+  {
+    "repo": "swkeep/keep-bags",
+    "sha": "236923212aec05c63557dc65e239f9729ff23f82",
+    "group": "sample"
+  },
+  {
+    "repo": "Ejiy/jl-laptop",
+    "sha": "2454a484e8fa1bb6f047f2b1e884fed284c3d8d4",
+    "group": "sample"
+  },
+  {
+    "repo": "it-scripts/it-drugs",
+    "sha": "78df12b537159eb3552311c158d07b98ed9d6219",
+    "group": "sample"
+  },
+  {
+    "repo": "TheOrderFivem/community_bridge",
+    "sha": "8accf38f974067c89e20d1abe816c004ea826dda",
+    "group": "sample"
+  },
+  {
+    "repo": "RaweRwe/qbcore-jobs",
+    "sha": "5020aaa6e913dab2594d7af51af9bc181ab270b9",
+    "group": "sample"
+  },
+  {
+    "repo": "Blumlaut/anticheese-anticheat",
+    "sha": "10f038c89ee433721f1242ef467794f30beee5a8",
+    "group": "sample"
+  },
+  {
+    "repo": "qbcore-fivem/qb-policejob",
+    "sha": "3ad3d190fa4d294f75506e2e3837b1124bfeb005",
+    "group": "sample"
+  },
+  {
+    "repo": "ItsANoBrainer/qb-scenes",
+    "sha": "bfd89cae3196765116fdfea3c3a3fea5bfe29f90",
+    "group": "sample"
+  },
+  {
+    "repo": "planeklm/razed-cryptomining",
+    "sha": "60cf2ca372d4895a174fc427bca2efcbeb879f71",
+    "group": "sample"
+  },
+  {
+    "repo": "qbcore-fivem/qb-inventory",
+    "sha": "dc3d07fc60139de569df38c5ac178ed4cada4577",
+    "group": "sample"
+  },
+  {
+    "repo": "pulsepk/pl-atmrob",
+    "sha": "12d85ca95a0718f75f6e35c920de5a49c1ea3fff",
+    "group": "sample"
+  },
+  {
+    "repo": "Korioz/krz_personalmenu",
+    "sha": "416f0ca8c856bf8e3d9ca80ca55c5c347363b9f9",
+    "group": "sample"
+  },
+  {
+    "repo": "TheIndra55/fivem-burglary",
+    "sha": "e61fbb6091c10cb7d2b0eb1706a5e81b11c7bc82",
+    "group": "sample"
+  },
+  {
+    "repo": "jgscripts/jg-vehiclemileage",
+    "sha": "62499cbe0b5280a3e30926174165ba28999c4794",
+    "group": "sample"
+  },
+  {
+    "repo": "LeonardoSoares98/lc_fuel",
+    "sha": "5cf82f0c0d4c81664cb7d653f9fa2d93402bb7d6",
+    "group": "sample"
+  },
+  {
+    "repo": "qbcore-fivem/qb-banking",
+    "sha": "b2dee4eae9eb9374f6adb303d9bf31cb1ddc3be8",
+    "group": "sample"
+  },
+  {
+    "repo": "swkeep/keep-paycheck",
+    "sha": "6b477006f4c65ed9d3462ca9c4c527799f3021c9",
+    "group": "sample"
+  },
+  {
+    "repo": "kasuganosoras/zerodream_parking",
+    "sha": "5f2e14e134853f1ad72fe604eb2b7a846430b0f0",
+    "group": "sample"
+  },
+  {
+    "repo": "M-DEVELOPMENT23/M-PropV2",
+    "sha": "afd9591bdb2b357576a1490042418753cc26866b",
+    "group": "sample"
+  },
+  {
+    "repo": "qbcore-fivem/qb-garages",
+    "sha": "f22a09f2e8c0d887e8b167e171bdbb24fdd48f9e",
+    "group": "sample"
+  },
+  {
+    "repo": "FiveM-Scripts/venomous-freemode",
+    "sha": "81f0098a7efe99452af9424676b67c3b05fec361",
+    "group": "sample"
+  },
+  {
+    "repo": "morais5/MS-Framework",
+    "sha": "b6d2d0f8937b1ea6610d2802c4157cbc44759b10",
+    "group": "sample"
+  },
+  {
+    "repo": "xDope7137/bp_megaphone",
+    "sha": "2754d4d17e56674942ccd86ad07018a16ec515e0",
+    "group": "sample"
+  },
+  {
+    "repo": "TrevorBarns/ProLaser4",
+    "sha": "5338e174f0c9021b75d454d61a5cc340e8847805",
+    "group": "sample"
+  },
+  {
+    "repo": "hoangducvn/MojiaGarages",
+    "sha": "d7480ae8faaab1e87dbf3fcce072835d0bc841d6",
+    "group": "sample"
+  },
+  {
+    "repo": "qbcore-fivem/qb-adminmenu",
+    "sha": "9d36ed18ffa8fa28a5b08476397e08788bfcd1e4",
+    "group": "sample"
+  },
+  {
+    "repo": "qbcore-fivem/qb-houses",
+    "sha": "3f2478557f22e4f063c7f1cbe3a994993101c54f",
+    "group": "sample"
+  },
+  {
+    "repo": "utkuali/Fleeca-Bank-Heists",
+    "sha": "68d1adde991a5d959520d9335e40c12fc6728f04",
+    "group": "sample"
+  },
+  {
+    "repo": "Peak-Studios/peak-sprays",
+    "sha": "d4668f076f3be26d96d10a21288fca1e158d4c0f",
+    "group": "sample"
+  },
+  {
+    "repo": "Teezy-Core/cfx-tcd-starterpack",
+    "sha": "12d06beb2f63c0884ee1e639c6d7a11287ce5785",
+    "group": "sample"
+  },
+  {
+    "repo": "qbcore-fivem/qb-multicharacter",
+    "sha": "85a03c4f3bdc100e898b9fb65614a9ce914fe926",
+    "group": "sample"
+  },
+  {
+    "repo": "qbcore-fivem/qb-ambulancejob",
+    "sha": "19bb190d7c41e6b79d836a45d7498bd3762d0bd4",
+    "group": "sample"
+  },
+  {
+    "repo": "qbcore-fivem/qb-clothing",
+    "sha": "8cca4009dd473ab30c30e443ecad50830b816ed7",
+    "group": "sample"
+  },
+  {
+    "repo": "qbcore-fivem/qb-drugs",
+    "sha": "51052d139bc482d9d0e94d4f47680b241e866bba",
+    "group": "sample"
+  },
+  {
+    "repo": "qbcore-fivem/qb-mechanicjob",
+    "sha": "9dded685057f3516f4904628a208fee24d92f105",
+    "group": "sample"
+  },
+  {
+    "repo": "QBCoreStore/qb-inventory",
+    "sha": "4d38ffa628a5cd11b6a1119d0f7be2e3f5ebca16",
+    "group": "sample"
+  },
+  {
+    "repo": "Giana/g-billing",
+    "sha": "5574bbb825bbe9d98e3a5a012843aee3f37f5967",
+    "group": "sample"
+  },
+  {
+    "repo": "pulsepk/pl_fraud",
+    "sha": "1c60e13e84d788c705927ca0786f1d4878d888d1",
+    "group": "sample"
+  },
+  {
+    "repo": "pulsepk/pl_printer",
+    "sha": "3ddef7eb0fbcbf07fc5cc977eb95b45d6a1a0cbc",
+    "group": "sample"
+  },
+  {
+    "repo": "qbcore-fivem/qb-management",
+    "sha": "67510bb0f7c440f31d4e64269ed01f47ac4fc59d",
+    "group": "sample"
+  },
+  {
+    "repo": "qbcore-fivem/qb-apartments",
+    "sha": "d9d40baaa69ecf556e270f6fcc3accaffbee6ebb",
+    "group": "sample"
+  },
+  {
+    "repo": "xchopin/FiveM-Clothes",
+    "sha": "96118848bea9067bd66ba0fc84a2d59e145f845f",
+    "group": "sample"
+  },
+  {
+    "repo": "qbcore-fivem/qb-vehiclesales",
+    "sha": "a29e922c928444711a696a24545879976b30058a",
+    "group": "sample"
+  },
+  {
+    "repo": "qbcore-fivem/qb-crypto",
+    "sha": "b39e7e15f4cd4a5ab58dec4be7004eec7c8b7e3b",
+    "group": "sample"
+  },
+  {
+    "repo": "qbcore-fivem/qb-recyclejob",
+    "sha": "4103ae2f27dbe9e6b0f5bb7292172d574b2e6130",
+    "group": "sample"
+  },
+  {
+    "repo": "qbcore-fivem/qb-jewelery",
+    "sha": "01b3fbb27fbc38069dbeae8a4dade067abad7b99",
+    "group": "sample"
+  },
+  {
+    "repo": "qbcore-fivem/qb-weed",
+    "sha": "318b5b1532191b8a6163f1ce53d4f8c28e7c0712",
+    "group": "sample"
+  },
+  {
+    "repo": "Jonirulah/esx_housing",
+    "sha": "a3cfd6118db23034db20c5c21c0f2ef52fd6f6e3",
+    "group": "sample"
+  },
+  {
+    "repo": "Giana/g-givecar",
+    "sha": "947a04693d0076e437d6357cf328ddde6dae65e2",
+    "group": "sample"
+  },
+  {
+    "repo": "Galaxyy2/gx-weedshop",
+    "sha": "f8dfafb0e299e83ab7ba93af8bf2684d9a049f66",
+    "group": "sample"
+  },
+  {
+    "repo": "Mo1810/-LEGACY-mo_lifeinvaderHeist",
+    "sha": "2409451782a440c9df69ea49c71d23d9f071fbe4",
+    "group": "sample"
+  },
+  {
+    "repo": "morais5/esx_bitcoinv2",
+    "sha": "6893a1fde393943eed4a172de8ae0c4fc63f96da",
+    "group": "sample"
+  },
+  {
+    "repo": "IceClusters/ictrophies",
+    "sha": "9e17b9c05200fb95c3d7b97ca9ed1a77f7645cef",
+    "group": "sample"
+  },
+  {
+    "repo": "Galaxyy2/gx-pizzeria",
+    "sha": "d706b6a2050b5b8ac0e170d9656f3767c198e717",
+    "group": "sample"
+  },
+  {
+    "repo": "Tuncion/tuncion_xp",
+    "sha": "40b86a67715ce0db03c21315b42eb22e4de83862",
+    "group": "sample"
+  },
+  {
+    "repo": "MattiVboiii/matti-airsoft",
+    "sha": "f446df2205e29c3519684bb3769652a03faf49b6",
+    "group": "sample"
+  },
+  {
+    "repo": "IllusionSquid/tis-skydiving",
+    "sha": "a94bdd5170f63bcd6f13928a4cfaaf511fef22ef",
+    "group": "sample"
+  },
+  {
+    "repo": "saugatxnepal/qb-garages",
+    "sha": "0ab0c7116aab0bd1f450ff886b8b666dd0351729",
+    "group": "sample"
+  },
+  {
+    "repo": "fruitmob/murderface-shops",
+    "sha": "0454a3cb73138c8fbab38b98d08922af1d1abb61",
+    "group": "sample"
+  },
+  {
+    "repo": "ZerXGIT/knxr-antitroll",
+    "sha": "f321b14c9e991625757a978501d0a1d381ab3a74",
+    "group": "sample"
+  },
+  {
+    "repo": "F5-Studio-FiveM/f5_boost",
+    "sha": "c306fcf808df1854cefa9d2037b9f06ee4905a77",
+    "group": "sample"
+  },
+  {
+    "repo": "morais5/JN_DISEASE",
+    "sha": "29f7fe99380d4f959bb31f7fe76c426c2ba44727",
+    "group": "sample"
+  },
+  {
+    "repo": "MalibuTechTeam/mbt_emote_menu",
+    "sha": "726c8e976953e3c61a217833adaa968a2507f652",
+    "group": "sample"
+  },
+  {
+    "repo": "james12007/qb-sheriffjob-target-main",
+    "sha": "917b91512468bcef50286b90e01549b6a9da2f72",
+    "group": "sample"
+  },
+  {
+    "repo": "fruitmob/murderface-pets",
+    "sha": "db190846e45033f7ff5fef8f7ab72d3bacc5e43a",
+    "group": "sample"
+  },
+  {
+    "repo": "Giana/g-mysterybox",
+    "sha": "7a4f7fbc436cb39311fb0ed909b0baeba48772c4",
+    "group": "sample"
+  },
+  {
+    "repo": "laforetbrut/v-phone-fivem",
+    "sha": "9bc7bf53d2a44fe02c5c97ab54d0b7437b47ba1f",
+    "group": "sample"
+  },
+  {
+    "repo": "jonteohr/esx_pilotjob",
+    "sha": "1fc59b4d2c6714fa45101360ace63c339efaee22",
+    "group": "sample"
+  },
+  {
+    "repo": "RaweRwe/ESX-qb-phone-v4",
+    "sha": "6d6643f99c2534e5f77be90870d772974860520e",
+    "group": "sample"
+  },
+  {
+    "repo": "planeklm/razed-cryptocrash",
+    "sha": "2483115b7eb34e6eeb84bda5538b92a444bce11b",
+    "group": "sample"
+  },
+  {
+    "repo": "MattiVboiii/matti-riddles",
+    "sha": "e93f60ea70c193d13b854f13c0082d01cc8d381c",
+    "group": "sample"
+  },
+  {
+    "repo": "Muhaddil/muhaddil_insurance",
+    "sha": "1c744cbf0723ee6cb2ca71738a7ee47c4e5328d0",
+    "group": "sample"
+  },
+  {
+    "repo": "BenoursonJ/ESX-Banker-Job-Upgraded",
+    "sha": "e144c77c2cdff701df0af5aeee5c2cc30d67a46a",
+    "group": "sample"
+  },
+  {
+    "repo": "ThymonA/CoreV-Framework",
+    "sha": "15f563edbccd7669d22a22030c076d4d38ee55d1",
+    "group": "sample"
+  },
+  {
+    "repo": "MalibuTechTeam/mbt_malisling",
+    "sha": "86d42228962486d2c61c796754e91b5b8fc485dc",
+    "group": "sample"
+  },
+  {
+    "repo": "turangarusso/Ruxo-Admin-Menu-ESX",
+    "sha": "938d68c5f8a49ed17e1d539b25013d48cd86f1a1",
+    "group": "sample"
+  },
+  {
+    "repo": "RockySouthpaw/new-garage-who-dis",
+    "sha": "e4ead7214968ffffe3634ee47f1f751217d4dd6d",
+    "group": "sample"
+  },
+  {
+    "repo": "james12007/qb-hayesjob",
+    "sha": "24137574e9f5f002487956740e5122fd7eb166fc",
+    "group": "sample"
+  },
+  {
+    "repo": "DaBurnerGermany/DaDuty",
+    "sha": "65e0ff6c1efd9598c7f8746b5f50d62a24e3a94a",
+    "group": "sample"
+  },
+  {
+    "repo": "Dhaappy/esx_gouv",
+    "sha": "a4bbd4f37a372c5944ca0ff2b534cbdec094c6bc",
+    "group": "sample"
+  },
+  {
+    "repo": "laforetbrut/v-sport-fivem",
+    "sha": "9120dd8c4cdcd7c19851efaff9e864d3a97befb7",
+    "group": "sample"
+  },
+  {
+    "repo": "AnimeBubsi/Esx_drugRobbery",
+    "sha": "1462f2ffd79f483121252d6ffa6b85682311a35a",
+    "group": "sample"
+  },
+  {
+    "repo": "bitpredator/bpt_resourcepack",
+    "sha": "44fd385e97648827a7ea2c0496863f932d3e5fda",
+    "group": "sample"
+  },
+  {
+    "repo": "ALFAMAS/qb-car-music",
+    "sha": "20c21c63045e8568e6d94350ba2dc4514a479039",
+    "group": "sample"
+  },
+  {
+    "repo": "12LetterMeme/qb-policeshop",
+    "sha": "0f2ef9c22649d48ab792d12a44d59495a7bd6be0",
+    "group": "sample"
+  },
+  {
+    "repo": "secret-sahil/qb-clothing",
+    "sha": "10543a7c0177c34e7fe5dd4db6349ee021db3bc8",
+    "group": "sample"
+  },
+  {
+    "repo": "qbcore-fivem/qb-spawn",
+    "sha": "0cb18b1ea2d6b55bdfec45abd6c3002f88173f00",
+    "group": "sample"
+  },
+  {
+    "repo": "qbcore-fivem/qb-pawnshop",
+    "sha": "698ed1c4fde0ac610eb8b1503716a8ff10f42873",
+    "group": "sample"
+  },
+  {
+    "repo": "anya-project/qb-inventory-rework",
+    "sha": "95b13cfc91c159ba5dbbd4fc94aa99a1ff7d2808",
+    "group": "sample"
+  },
+  {
+    "repo": "qbcore-fivem/qb-vehicleshop",
+    "sha": "e8652970aca3324d2a18a440f3d3871715338da8",
+    "group": "sample"
+  },
+  {
+    "repo": "MOXHARTZ/mx-discordtool",
+    "sha": "8a7e001e74cf4d5fd1e0eaaf39c239bec429b4a0",
+    "group": "sample"
+  },
+  {
+    "repo": "qbcore-fivem/qb-scrapyard",
+    "sha": "bcb987854a4d6911d64f80ee37ca754508488f52",
+    "group": "sample"
+  },
+  {
+    "repo": "Muhaddil/FiveM-MilageVehicleFailure",
+    "sha": "a27a0f5f1423f39d6e0f9416d0d9ac7b3ca3a3e2",
+    "group": "sample"
+  },
+  {
+    "repo": "it-scripts/it-crafting",
+    "sha": "e24bb13606489beb560f2d146a3715bc5efa423d",
+    "group": "sample"
+  },
+  {
+    "repo": "Erazaya/era-outfits",
+    "sha": "373b208ed1ecaab6a6f778914d2040aa72f3cf60",
+    "group": "sample"
+  },
+  {
+    "repo": "Ranjit-Develops/SkybarJob-QBCore",
+    "sha": "d5b83fd34576fd6375edc7dd23cdd06ffd50f0cc",
+    "group": "sample"
+  },
+  {
+    "repo": "qbcore-fivem/qb-lapraces",
+    "sha": "2a33aba3f44d24b466931bfff548fea84ce747da",
+    "group": "sample"
+  },
+  {
+    "repo": "qbcore-redm/qbr-core",
+    "sha": "38567c28d7900b269cc95d3f9c54caf7b2658184",
+    "group": "sample"
+  },
+  {
+    "repo": "Ranjit-Develops/Ranjit-irishpub",
+    "sha": "18ac22881f93577a752b29645499dd06e61ce5a9",
+    "group": "sample"
+  },
+  {
+    "repo": "devterrific/ProjectTerrific",
+    "sha": "c682b07c6bd9765ddce3d6c66c5a55f9ff77c471",
+    "group": "sample"
+  },
+  {
+    "repo": "QBCoreStore/vehicleControl",
+    "sha": "d576897733713dfa42b349ccb087dd8133ace016",
+    "group": "sample"
+  },
+  {
+    "repo": "Dream-Services/dream_christmas",
+    "sha": "3a3c4d821907a403adaac3aedb2a0d0b91371544",
+    "group": "sample"
+  },
+  {
+    "repo": "anya-project/ap_pet",
+    "sha": "f7ac801249daca3a38cc8a395a14593ff2d06498",
+    "group": "sample"
+  },
+  {
+    "repo": "fruitmob/murderface-appearance",
+    "sha": "606294f2dbef92554db56990146d5772bb768b99",
+    "group": "sample"
+  },
+  {
+    "repo": "Geckomacabre/GTA-VI-Inspired-HUD-for-FiveM",
+    "sha": "4ad55846f0d9e548c03146b09de3de89af9bb0a2",
+    "group": "sample"
+  },
+  {
+    "repo": "MSK-Scripts/msk_core",
+    "sha": "1aea121f422d6e2b961a46372493fe179dfbd5fa",
+    "group": "sample"
+  },
+  {
+    "repo": "NexureStore/nxPausemenu",
+    "sha": "7e2c3329df18d963b3990cc847e3f55ebb4d544f",
+    "group": "sample"
+  },
+  {
+    "repo": "michieldesair/dr-scratching",
+    "sha": "478b7ab5d404f40c9a58adb0a03697c48bf42fc6",
+    "group": "sample"
+  }
+]

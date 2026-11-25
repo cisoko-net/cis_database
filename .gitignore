@@ -1,0 +1,16 @@
+# node_modules ships in the public tree, trimmed to its runtime files by
+# tools/trim_node_modules.sh and added on purpose; npm ci output stays out.
+node_modules/
+cache/
+tmp/
+*.sqlite
+*.sqlite-wal
+*.sqlite-shm
+*.wal
+*.zip
+*.out
+__pycache__/
+*.pyc
+.vs/
+.idea/
+tests/corpus/.cache/

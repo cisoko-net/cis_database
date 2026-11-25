@@ -1,0 +1,84 @@
+/* =============================================================================
+   cis_database dashboard theme
+
+   The Cisoko NUI tokens, the same values cis_inventory ships, so /cis_db looks
+   like the rest of the cis_* panels: near-black graphite glass, silver text,
+   one gold accent.
+
+   CEF on the production client is Chromium 103: plain custom properties and
+   rgba() only. No color-mix() (Chromium 111), no nesting, no :has(), no
+   backdrop-filter (the game is not behind the page as pixels).
+   ============================================================================= */
+
+:root {
+  --scrollbar: 4px;
+
+  /* Brand */
+  --cis-bg: #090909;
+  --cis-panel: #151515;
+  --cis-inset: #060606;
+  --cis-fg: #f2f6fc;
+  --cis-muted: #a2b1c3;
+  --cis-faint: rgba(162, 177, 195, 0.62);
+  --cis-accent: #d8a83e;
+  --cis-accent-hot: #ffe08a;
+  --cis-accent-deep: #9a6a14;
+  --cis-accent-soft: rgba(216, 168, 62, 0.16);
+  --cis-accent-line: rgba(216, 168, 62, 0.55);
+  --cis-on-accent: #120d02;
+
+  /* Lines */
+  --cis-line: rgba(255, 255, 255, 0.08);
+  --cis-line-strong: rgba(255, 255, 255, 0.16);
+  --cis-line-hot: rgba(242, 246, 252, 0.42);
+
+  /* States */
+  --cis-inform: #6aa8ff;
+  --cis-success: #57c785;
+  --cis-warning: #f0b84a;
+  --cis-error: #ff6b6b;
+
+  /* Frosted glass, faked with layers. */
+  --glass-top: rgba(30, 33, 38, 0.80);
+  --glass-bottom: rgba(10, 11, 13, 0.90);
+  --glass-sheen: rgba(255, 255, 255, 0.055);
+  --glass-edge: rgba(255, 255, 255, 0.10);
+  --glass-edge-low: rgba(255, 255, 255, 0.03);
+  --glass-shadow: rgba(0, 0, 0, 0.45);
+
+  /* Tiles inside the panel */
+  --tile-top: rgba(255, 255, 255, 0.045);
+  --tile-bottom: rgba(255, 255, 255, 0.015);
+  --bar-track: rgba(255, 255, 255, 0.08);
+
+  /* Shape */
+  --r-xs: 6px;
+  --r-sm: 10px;
+  --r-md: 14px;
+  --r-lg: 20px;
+  --r-pill: 999px;
+
+  /* Type */
+  --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, 'Cascadia Mono', Consolas, monospace;
+
+  /* 1rem is 16px at 1920x1080 and follows the screen. */
+  --cis-scale: 1;
+  --fs-micro: max(0.58rem, calc(10px * var(--cis-scale)));
+  --fs-small: max(0.68rem, calc(11px * var(--cis-scale)));
+  --fs-body-s: max(0.76rem, calc(12px * var(--cis-scale)));
+
+  /* Motion. Only transform, opacity and colours animate. */
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --t-press: 90ms;
+  --t-hover: 120ms;
+  --t-panel: 260ms;
+}
+
+@media (prefers-contrast: more) {
+  :root {
+    --cis-muted: #b9c4d2;
+    --glass-top: rgba(14, 15, 17, 0.94);
+    --glass-bottom: rgba(6, 6, 7, 0.97);
+  }
+}

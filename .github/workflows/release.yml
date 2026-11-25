@@ -1,0 +1,56 @@
+name: release
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+
+jobs:
+  pack:
+    runs-on: ubuntu-latest
+    # gh release upload needs write access even when the repo's default
+    # token is read-only.
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: install runtime modules
+        run: npm ci
+
+      - name: pack the resource
+        run: |
+          set -eu
+          stage="$(mktemp -d)"
+          root="$stage/cis_database"
+          mkdir -p "$root"
+          cp fxmanifest.lua server.js dialect.js collation.js cdc.js identity.lua index.lua package.json package-lock.json config.json README.md API.md LICENSE.md CHANGELOG.md SECURITY.md CONTRIBUTING.md "$root/"
+          cp -a lib client server compat docs "$root/"
+          # The dashboard ships built; its sources stay in the repository.
+          mkdir -p "$root/web"
+          cp -a web/dist "$root/web/dist"
+          cp -a node_modules "$root/node_modules"
+          # Only what runs ships: sql.js's asm build (server.js loads
+          # dist/sql-asm.js), no type packages, tests or browser builds.
+          bash tools/trim_node_modules.sh "$root/node_modules"
+          mkdir -p dist
+          ( cd "$stage" && zip -qr "$GITHUB_WORKSPACE/dist/cis_database.zip" cis_database )
+          unzip -l dist/cis_database.zip | head
+          test -n "$(unzip -l dist/cis_database.zip | grep 'node_modules/mysql2/package.json')"
+          test -n "$(unzip -l dist/cis_database.zip | grep 'node_modules/sql.js/dist/sql-asm.js')"
+          test -n "$(unzip -l dist/cis_database.zip | grep 'cis_database/web/dist/index.html')"
+          test -n "$(unzip -l dist/cis_database.zip | grep 'cis_database/docs/CONFIG.md')"
+          test -z "$(unzip -l dist/cis_database.zip | grep -E 'cis_database/(tests|bench|web/src)/')"
+
+      - name: attach the zip to the release
+        if: github.event_name == 'release'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release upload "${{ github.event.release.tag_name }}" dist/cis_database.zip --clobber

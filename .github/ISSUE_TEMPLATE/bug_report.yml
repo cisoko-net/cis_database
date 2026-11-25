@@ -1,0 +1,70 @@
+name: Bug report
+description: A query that fails, returns something oxmysql would not, or a crash or hitch.
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the report. The SQL and the console lines are what let us reproduce it, so please paste them as they are.
+        Remove passwords from connection strings and anything private from the rows before you post.
+  - type: input
+    id: version
+    attributes:
+      label: cis_database version
+      description: The `cis_version` line in fxmanifest.lua, or the version the console prints on boot.
+      placeholder: 1.0.0
+    validations:
+      required: true
+  - type: input
+    id: server
+    attributes:
+      label: FXServer build and framework
+      description: The artifact build number, and the framework (Qbox, QBCore, ESX, ND, standalone) with its version.
+      placeholder: 17000, Qbox 1.20
+    validations:
+      required: true
+  - type: input
+    id: mariadb
+    attributes:
+      label: MariaDB or MySQL version
+      placeholder: MariaDB 10.11
+  - type: input
+    id: resource
+    attributes:
+      label: Resource that sent the query
+      description: The resource name and, if it is public, a link to it.
+  - type: textarea
+    id: sql
+    attributes:
+      label: The SQL
+      description: The statement as the resource sends it, with its parameters.
+      render: sql
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What oxmysql returns
+      description: The result or error the same call gives on oxmysql, if you know it.
+  - type: textarea
+    id: actual
+    attributes:
+      label: What cis_database returns
+      description: The result, the error, or what goes wrong in game.
+    validations:
+      required: true
+  - type: textarea
+    id: console
+    attributes:
+      label: Console output
+      description: The `[cis_database]` lines around the failure.
+      render: text
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: Only cis_database is started for oxmysql (no real `oxmysql` ensured beside it).
+          required: true
+        - label: I removed passwords and private data from what I pasted.
+          required: true

@@ -1,0 +1,56 @@
+{
+  "debug": false,
+  "frameBudgetMs": 25,
+  "activeProfile": "durable",
+  "logging": {
+    "prefix": "[cis_database]",
+    "logSqlErrors": true,
+    "slowQueryThresholdMs": 100
+  },
+  "replication": {
+    "flushIntervalMs": 50,
+    "batchSize": 64,
+    "maxQueueEntries": 4096,
+    "poolConnections": 4
+  },
+  "changeDataCapture": {
+    "enabled": true,
+    "pollIntervalMs": 1000,
+    "dirtyTtlMs": 2000
+  },
+  "profiles": {
+    "durable": {
+      "sqlite": {
+        "journal_mode": "WAL",
+        "synchronous": "NORMAL",
+        "wal_autocheckpoint": 0,
+        "cache_size_kb": 1048576,
+        "mmap_size_bytes": 1073741824,
+        "busy_timeout_ms": 5000,
+        "max_wal_bytes": 104857600
+      }
+    },
+    "performance": {
+      "sqlite": {
+        "journal_mode": "OFF",
+        "synchronous": "0",
+        "locking_mode": "EXCLUSIVE",
+        "cache_size_kb": 1048576,
+        "mmap_size_bytes": 2147483648,
+        "busy_timeout_ms": 5000,
+        "max_wal_bytes": 0
+      },
+      "replication": {
+        "flushIntervalMs": 20,
+        "batchSize": 128,
+        "maxQueueEntries": 8192,
+        "poolConnections": 8
+      },
+      "changeDataCapture": {
+        "enabled": true,
+        "pollIntervalMs": 1000,
+        "dirtyTtlMs": 1000
+      }
+    }
+  }
+}

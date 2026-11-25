@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 380" width="760" height="380" role="img" aria-label="p99 call latency on a live qbox server: oxmysql 23.2, 57.0 and 89.4 ms; cis_database 15.9, 21.2 and 32.3 ms at 64, 128 and 256 players">
+<rect width="760" height="380" rx="8" fill="#090909"/>
+<g font-family="Verdana,DejaVu Sans,Geneva,sans-serif" font-size="13" fill="#9AA0A8">
+<text x="70" y="32" font-size="17" font-weight="700" fill="#F2F6FC">p99 call latency on a live qbox server (ms, lower is better)</text>
+<text x="70" y="54" font-size="12">FXServer 35245, 5 rounds, median. bench/results/2026-11-02-8c73b74-frame25</text>
+<line x1="70" x2="730" y1="300" y2="300" stroke="#2A2A2A"/><text x="60" y="304" text-anchor="end">0</text>
+<line x1="70" x2="730" y1="254" y2="254" stroke="#2A2A2A"/><text x="60" y="258" text-anchor="end">20</text>
+<line x1="70" x2="730" y1="208" y2="208" stroke="#2A2A2A"/><text x="60" y="212" text-anchor="end">40</text>
+<line x1="70" x2="730" y1="162" y2="162" stroke="#2A2A2A"/><text x="60" y="166" text-anchor="end">60</text>
+<line x1="70" x2="730" y1="116" y2="116" stroke="#2A2A2A"/><text x="60" y="120" text-anchor="end">80</text>
+<line x1="70" x2="730" y1="70" y2="70" stroke="#2A2A2A"/><text x="60" y="74" text-anchor="end">100</text>
+<rect x="116" y="246.6" width="60" height="53.4" fill="#8A8F98" rx="2"/><text x="146" y="240.6" text-anchor="middle" fill="#F2F6FC">23.2</text>
+<rect x="184" y="263.4" width="60" height="36.6" fill="#D8A83E" rx="2"/><text x="214" y="257.4" text-anchor="middle" fill="#F2F6FC">15.9</text>
+<text x="180" y="322" text-anchor="middle" fill="#F2F6FC">64 players</text>
+<rect x="336" y="168.9" width="60" height="131.1" fill="#8A8F98" rx="2"/><text x="366" y="162.9" text-anchor="middle" fill="#F2F6FC">57.0</text>
+<rect x="404" y="251.2" width="60" height="48.8" fill="#D8A83E" rx="2"/><text x="434" y="245.2" text-anchor="middle" fill="#F2F6FC">21.2</text>
+<text x="400" y="322" text-anchor="middle" fill="#F2F6FC">128 players</text>
+<rect x="556" y="94.4" width="60" height="205.6" fill="#8A8F98" rx="2"/><text x="586" y="88.4" text-anchor="middle" fill="#F2F6FC">89.4</text>
+<rect x="624" y="225.7" width="60" height="74.3" fill="#D8A83E" rx="2"/><text x="654" y="219.7" text-anchor="middle" fill="#F2F6FC">32.3</text>
+<text x="620" y="322" text-anchor="middle" fill="#F2F6FC">256 players</text>
+<rect x="70" y="346" width="12" height="12" fill="#8A8F98"/><text x="88" y="356">oxmysql 2.14.3</text>
+<rect x="220" y="346" width="12" height="12" fill="#D8A83E"/><text x="238" y="356">cis_database</text>
+</g>
+</svg>
